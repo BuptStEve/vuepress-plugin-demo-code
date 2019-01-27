@@ -1,0 +1,79 @@
+{
+    "name": "vuepress-plugin-demo-code",
+    "version": "0.1.0",
+    "description": "Demo and code plugin for vuepress",
+    "main": "src/index.js",
+    "scripts": {
+        "docs": "vuepress dev docs --host localhost",
+        "docs:build": "vuepress build docs",
+        "cov": "open coverage/lcov-report/index.html",
+        "tdd": "cross-env NODE_ENV=test jest --watch",
+        "test": "cross-env NODE_ENV=test jest",
+        "lint": "eslint --fix src/ test/",
+        "deploy": "yarn docs:build && gh-pages -m \"[ci skip]\" -d docs/.vuepress/dist",
+        "pub": "npm publish"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "lint-staged",
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "{src,test}/**/*.js": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "jest": {
+        "bail": true,
+        "clearMocks": true,
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "src/**"
+        ]
+    },
+    "dependencies": {
+        "@vuepress/shared-utils": "^1.0.0-alpha.32",
+        "markdown-it-container": "^2.0.0",
+        "prismjs": "^1.15.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.3.2",
+        "@commitlint/config-conventional": "^7.3.1",
+        "babel-eslint": "^10.0.1",
+        "codecov": "^3.1.0",
+        "cross-env": "^5.2.0",
+        "eslint": "^5.12.1",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.15.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "gh-pages": "^2.0.1",
+        "husky": "^1.3.1",
+        "jest": "^24.0.0",
+        "lint-staged": "^8.1.0",
+        "rimraf": "^2.6.3",
+        "vuepress": "^1.0.0-alpha.32"
+    },
+    "keywords": [
+        "vue",
+        "code",
+        "demo",
+        "vuepress",
+        "demo-code",
+        "documentation"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BuptStEve/vuepress-plugin-demo-code.git"
+    },
+    "homepage": "https://buptsteve.github.io/vuepress-plugin-demo-code/",
+    "author": "StEve Young",
+    "license": "MIT"
+}

@@ -1,0 +1,5 @@
+test
+*.log
+coverage
+.circleci
+docs/.vuepress/dist
