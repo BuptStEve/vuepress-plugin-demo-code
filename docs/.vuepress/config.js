@@ -9,7 +9,13 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: `/favicon.ico` }],
     ],
-    plugins: [demoCode],
+    plugins: [
+        [demoCode, {
+            showText: 'show more',
+            hideText: 'hide',
+            minHeight: 200,
+        }]
+    ],
     evergreen: true,
     serviceWorker: true,
     themeConfig: {

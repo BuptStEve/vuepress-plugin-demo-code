@@ -1,5 +1,5 @@
 <template>
-    <section class="demo-and-code-wrapper" :style="customStyle">
+    <section class="demo-and-code-wrapper">
         <slot name="demo" />
 
         <div
@@ -25,8 +25,11 @@ export default {
     props: {
         showText: { type: String, default: 'show code' },
         hideText: { type: String, default: 'hide code' },
-        minHeight: { type: Number, default: 200 },
-        customStyle: { type: [String, Object], default: '' },
+        minHeight: {
+            type: Number,
+            default: 200,
+            validator: val => val >= 0,
+        },
     },
     data () {
         return {
@@ -99,9 +102,7 @@ export default {
 html, body {
     scroll-behavior: smooth;
 }
-</style>
 
-<style lang="stylus" scoped>
 .demo-and-code-wrapper {
     padding: 20px 0;
 
