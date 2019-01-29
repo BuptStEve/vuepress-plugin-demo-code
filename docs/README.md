@@ -1,5 +1,11 @@
 <h1 align="center">vuepress-plugin-demo-code</h1>
 
+<p align="center">
+    <a href="https://circleci.com/gh/BuptStEve/vuepress-plugin-demo-code/tree/master"><img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Build Status"></a>
+    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version"></a>
+    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License"></a>
+</p>
+
 > demo-code plugin for vuepress.
 
 借助这个插件，你可以通过下述的语法在展示 demo 的同时，将这段代码展示出来。
