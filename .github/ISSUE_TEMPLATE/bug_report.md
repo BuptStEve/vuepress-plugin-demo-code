@@ -1,14 +1,17 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: 'bug: your bug'
+title: 'bug: your bug...'
 labels: bug
 assignees: BuptStEve
 
 ---
 
+**Version**
+Version [e.g. 0.1.0]
+
 **Describe the bug**
-A clear and concise description of what the bug is.
+A clear and concise description of what the bug is. If applicable, add screenshots to help explain your problem.
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -17,15 +20,16 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
+If it's convenient:
+
+* Add an online address to reproduce：
+  * codepen: https://codepen.io/
+  * jsfiddle: https://jsfiddle.net/
+  * codesandbox: https://codesandbox.io/
+* Add a repository to reproduce：https://github.com/new
+
 **Expected behavior**
 A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - Vuepress version [e.g. 1.0.0-alpha.32]
- - Version [e.g. 0.1.0]
 
 **Additional context**
 Add any other context about the problem here.
