@@ -3,6 +3,7 @@
     "version": "0.2.1",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
+    "files": ["src"],
     "scripts": {
         "docs": "vuepress dev docs --host localhost",
         "docs:build": "vuepress build docs",
