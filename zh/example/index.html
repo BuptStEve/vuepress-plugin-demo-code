@@ -7,8 +7,8 @@
     <meta name="description" content="📝 同时展示 demo 和 code 的 vuepress 插件">
     <link rel="icon" href="/vuepress-plugin-demo-code/favicon.ico">
     
-    <link rel="preload" href="/vuepress-plugin-demo-code/assets/css/0.styles.113713b3.css" as="style"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/app.a93e2939.js" as="script"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/2.11b09fe7.js" as="script"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/8.a4f28d3a.js" as="script"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/3.0dc68db1.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/4.e34f40af.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/5.2ed97afa.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/6.6dbe33f2.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/7.dc2cb5b0.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/9.80512288.js">
-    <link rel="stylesheet" href="/vuepress-plugin-demo-code/assets/css/0.styles.113713b3.css">
+    <link rel="preload" href="/vuepress-plugin-demo-code/assets/css/0.styles.74decaf3.css" as="style"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/app.e3166ad0.js" as="script"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/2.2b717d65.js" as="script"><link rel="preload" href="/vuepress-plugin-demo-code/assets/js/8.8fa5808f.js" as="script"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/3.0b530297.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/4.813507db.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/5.3877502f.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/6.839ce8ef.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/7.560f29fd.js"><link rel="prefetch" href="/vuepress-plugin-demo-code/assets/js/9.0327d666.js">
+    <link rel="stylesheet" href="/vuepress-plugin-demo-code/assets/css/0.styles.74decaf3.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-plugin-demo-code/zh/" class="home-link router-link-active"><!----> <span class="site-name">vuepress-plugin-demo-code</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress-plugin-demo-code/zh/" class="nav-link">指南</a></div><div class="nav-item"><a href="/vuepress-plugin-demo-code/zh/example/" class="nav-link router-link-exact-active router-link-active">示例</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://buptsteve.github.io/markdown-it-vuese/" target="_blank" rel="noopener noreferrer" class="nav-link external">
@@ -32,9 +32,46 @@
 <span class="token punctuation">}</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 :::
-</code></pre></div><h3 id="实现效果"><a href="#实现效果" aria-hidden="true" class="header-anchor">#</a> 实现效果</h3> <section class="demo-and-code-wrapper"><button>Click me!</button> <div class="code-control" style="top:0px;display:;">
-        hide
-        <div class="icon" style="transform:rotate(0);"></div></div> <div class="code-wrapper" style="max-height:9999px;"><div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="实现效果"><a href="#实现效果" aria-hidden="true" class="header-anchor">#</a> 实现效果</h3> <section class="demo-and-code-wrapper"><button>Click me!</button> <div class="code-control" style="top:0px;cursor:pointer;"><span style="display:;">
+            hide
+            <div class="arrow-icon" style="transform:rotate(0);"></div></span> <div class="online-wrapper"><form target="_blank" action="https://codepen.io/pen/define" method="post" class="demo-and-code-codepen-wrapper"><input type="hidden" name="data" value="{&quot;js&quot;:&quot;new Vue({\n\tel: '#app', \n\tmethods: {\n        onClick: () =&gt; { window.alert(1) },\n    },\n})&quot;,&quot;css&quot;:null,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot;&gt;\n\n&lt;button @click=\&quot;onClick\&quot;&gt;Click me!&lt;/button&gt;\n\n&lt;/div&gt;&quot;,&quot;layout&quot;:&quot;left&quot;,&quot;editors&quot;:&quot;101&quot;,&quot;js_external&quot;:&quot;https://unpkg.com/vue/dist/vue.js&quot;,&quot;css_external&quot;:&quot;&quot;,&quot;js_pre_processor&quot;:&quot;babel&quot;}"> <!----> <button type="submit" data-tip="codepen"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve"><g><path d="M250.001,0C111.927,0,0,111.927,0,250.001C0,388.077,111.927,500,250.001,500C388.073,500,500,388.077,500,250.001
+        C500,111.927,388.073,0,250.001,0z M250.001,458.943c-115.212,0-208.941-93.733-208.941-208.942
+        c0-115.208,93.729-208.941,208.941-208.941c115.208,0,208.938,93.733,208.938,208.941
+        C458.939,365.21,365.21,458.943,250.001,458.943z"></path> <path d="M404.462,201.172c-0.028-0.195-0.076-0.382-0.109-0.577c-0.065-0.374-0.135-0.748-0.232-1.114
+        c-0.057-0.22-0.138-0.431-0.206-0.642c-0.106-0.326-0.212-0.651-0.342-0.968c-0.091-0.22-0.196-0.439-0.297-0.651
+        c-0.14-0.3-0.285-0.593-0.452-0.877c-0.122-0.212-0.251-0.416-0.377-0.618c-0.18-0.277-0.362-0.546-0.562-0.806
+        c-0.146-0.194-0.3-0.39-0.454-0.577c-0.212-0.243-0.432-0.487-0.664-0.716c-0.174-0.178-0.346-0.357-0.528-0.521
+        c-0.244-0.219-0.496-0.431-0.752-0.633c-0.198-0.155-0.395-0.31-0.602-0.456c-0.078-0.049-0.146-0.114-0.22-0.163L257.369,97.656
+        c-4.464-2.976-10.274-2.976-14.738,0l-141.295,94.196c-0.073,0.049-0.142,0.114-0.219,0.163c-0.208,0.146-0.403,0.301-0.598,0.456
+        c-0.26,0.203-0.512,0.415-0.752,0.633c-0.187,0.164-0.357,0.342-0.533,0.521c-0.231,0.229-0.451,0.473-0.658,0.716
+        c-0.159,0.188-0.313,0.383-0.459,0.577c-0.195,0.26-0.383,0.529-0.557,0.806c-0.134,0.203-0.26,0.406-0.382,0.618
+        c-0.163,0.284-0.309,0.577-0.451,0.877c-0.102,0.211-0.208,0.431-0.297,0.651c-0.13,0.317-0.236,0.642-0.341,0.968
+        c-0.07,0.211-0.146,0.422-0.208,0.642c-0.097,0.366-0.162,0.74-0.231,1.114c-0.032,0.195-0.081,0.382-0.106,0.577
+        c-0.077,0.569-0.122,1.146-0.122,1.732v94.197c0,0.585,0.044,1.162,0.122,1.74c0.025,0.188,0.074,0.382,0.106,0.568
+        c0.069,0.374,0.134,0.748,0.231,1.114c0.062,0.22,0.138,0.432,0.208,0.643c0.105,0.324,0.211,0.65,0.341,0.975
+        c0.089,0.222,0.195,0.433,0.297,0.645c0.143,0.3,0.289,0.592,0.451,0.885c0.122,0.204,0.248,0.406,0.382,0.61
+        c0.174,0.276,0.362,0.545,0.557,0.806c0.146,0.203,0.301,0.391,0.459,0.577c0.208,0.243,0.427,0.488,0.658,0.716
+        c0.175,0.178,0.346,0.357,0.533,0.52c0.24,0.221,0.492,0.432,0.752,0.635c0.195,0.155,0.391,0.31,0.598,0.454
+        c0.077,0.05,0.146,0.115,0.219,0.163l141.295,94.197c2.231,1.487,4.802,2.236,7.371,2.236c2.566,0,5.135-0.749,7.368-2.236
+        l141.295-94.197c0.074-0.048,0.142-0.113,0.22-0.163c0.207-0.145,0.403-0.299,0.602-0.454c0.256-0.203,0.508-0.414,0.752-0.635
+        c0.183-0.162,0.354-0.342,0.528-0.52c0.232-0.228,0.452-0.473,0.664-0.716c0.154-0.187,0.308-0.374,0.454-0.577
+        c0.2-0.261,0.383-0.529,0.562-0.806c0.126-0.204,0.255-0.406,0.377-0.61c0.167-0.293,0.312-0.585,0.452-0.885
+        c0.101-0.212,0.206-0.423,0.297-0.645c0.13-0.324,0.235-0.65,0.342-0.975c0.068-0.211,0.149-0.423,0.206-0.643
+        c0.098-0.366,0.167-0.74,0.232-1.114c0.033-0.187,0.081-0.381,0.109-0.568c0.073-0.578,0.119-1.155,0.119-1.74v-94.197
+        C404.581,202.318,404.535,201.741,404.462,201.172z M263.286,133.533l104.088,69.387l-46.493,31.103l-57.595-38.527V133.533z
+         M236.715,133.533v61.963l-57.592,38.527l-46.497-31.103L236.715,133.533z M121.99,227.771l33.238,22.231l-33.238,22.233V227.771z
+         M236.715,366.471l-104.088-69.388l46.497-31.094l57.592,38.52V366.471z M250.001,281.431l-46.988-31.429l46.988-31.428
+        l46.985,31.428L250.001,281.431z M263.286,366.471v-61.962l57.595-38.52l46.493,31.094L263.286,366.471z M378.01,272.234
+        l-33.233-22.233l33.233-22.231V272.234z"></path></g></svg></button></form> <form target="_blank" action="https://jsfiddle.net/api/post/library/pure" method="post" class="demo-and-code-codepen-wrapper"><!----> <input type="hidden" name="js" value="new Vue({
+	el: '#app', 
+	methods: {
+        onClick: () =&gt; { window.alert(1) },
+    },
+})"> <input type="hidden" name="css"> <input type="hidden" name="html" value="&lt;div id=&quot;app&quot;&gt;
+
+&lt;button @click=&quot;onClick&quot;&gt;Click me!&lt;/button&gt;
+
+&lt;/div&gt;"> <input type="hidden" name="panel_js" value="3"> <input type="hidden" name="resources" value="https://unpkg.com/vue/dist/vue.js"> <button type="submit" data-tip="jsfiddle"><svg t="1547088289967" viewBox="0 0 1170 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1952" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon"><path d="M1028.571429 441.142857q63.428571 26.285714 102.571428 83.142857T1170.285714 650.857143q0 93.714286-67.428571 160.285714T940 877.714286q-2.285714 0-6.571429-0.285715t-6-0.285714H232q-97.142857-5.714286-164.571429-71.714286T0 645.142857q0-62.857143 31.428571-116t84-84q-6.857143-22.285714-6.857142-46.857143 0-65.714286 46.857142-112t113.714286-46.285714q54.285714 0 98.285714 33.142857 42.857143-88 127.142858-141.714286t186.571428-53.714285q94.857143 0 174.857143 46T982.571429 248.571429t46.571428 172q0 3.428571-0.285714 10.285714t-0.285714 10.285714zM267.428571 593.142857q0 69.714286 48 110.285714t118.857143 40.571429q78.285714 0 137.142857-56.571429-9.142857-11.428571-27.142857-32.285714T519.428571 626.285714q-38.285714 37.142857-82.285714 37.142857-31.428571 0-53.428571-19.142857T361.714286 594.285714q0-30.285714 22-49.714285t52.285714-19.428572q25.142857 0 48.285714 12t41.714286 31.428572 37.142857 42.857142 39.428572 46.857143 44 42.857143 55.428571 31.428572 69.428571 12q69.142857 0 116.857143-40.857143T936 594.857143q0-69.142857-48-109.714286t-118.285714-40.571428q-81.714286 0-137.714286 55.428571l53.142857 61.714286q37.714286-36.571429 81.142857-36.571429 29.714286 0 52.571429 18.857143t22.857143 48q0 32.571429-21.142857 52.285714t-53.714286 19.714286q-24.571429 0-47.142857-12t-41.142857-31.428571-37.428572-42.857143-39.714286-46.857143-44.285714-42.857143-55.142857-31.428571T434.285714 444.571429q-69.714286 0-118.285714 40.285714T267.428571 593.142857z" p-id="1953"></path></svg></button></form></div></div> <div class="code-wrapper" style="max-height:9999px;"><div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onClick<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Click me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
@@ -52,12 +89,49 @@
 :::
 </code></pre></div><h3 id="实现效果-2"><a href="#实现效果-2" aria-hidden="true" class="header-anchor">#</a> 实现效果</h3> <section class="demo-and-code-wrapper"><p>
     this is <span style="color:red;">common</span> html
-</p> <div class="code-control" style="top:0px;display:;">
-        hide
-        <div class="icon" style="transform:rotate(0);"></div></div> <div class="code-wrapper" style="max-height:9999px;"><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+</p> <div class="code-control" style="top:0px;cursor:pointer;"><span style="display:;">
+            hide
+            <div class="arrow-icon" style="transform:rotate(0);"></div></span> <div class="online-wrapper"><form target="_blank" action="https://codepen.io/pen/define" method="post" class="demo-and-code-codepen-wrapper"><input type="hidden" name="data" value="{&quot;js&quot;:&quot;new Vue({\n\tel: '#app', \n\t\n})&quot;,&quot;css&quot;:null,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot;&gt;\n\n&lt;p&gt;\n    this is &lt;span style=\&quot;color: red;\&quot;&gt;common&lt;/span&gt; html\n&lt;/p&gt;\n\n&lt;/div&gt;&quot;,&quot;layout&quot;:&quot;left&quot;,&quot;editors&quot;:&quot;101&quot;,&quot;js_external&quot;:&quot;https://unpkg.com/vue/dist/vue.js&quot;,&quot;css_external&quot;:&quot;&quot;,&quot;js_pre_processor&quot;:&quot;babel&quot;}"> <!----> <button type="submit" data-tip="codepen"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve"><g><path d="M250.001,0C111.927,0,0,111.927,0,250.001C0,388.077,111.927,500,250.001,500C388.073,500,500,388.077,500,250.001
+        C500,111.927,388.073,0,250.001,0z M250.001,458.943c-115.212,0-208.941-93.733-208.941-208.942
+        c0-115.208,93.729-208.941,208.941-208.941c115.208,0,208.938,93.733,208.938,208.941
+        C458.939,365.21,365.21,458.943,250.001,458.943z"></path> <path d="M404.462,201.172c-0.028-0.195-0.076-0.382-0.109-0.577c-0.065-0.374-0.135-0.748-0.232-1.114
+        c-0.057-0.22-0.138-0.431-0.206-0.642c-0.106-0.326-0.212-0.651-0.342-0.968c-0.091-0.22-0.196-0.439-0.297-0.651
+        c-0.14-0.3-0.285-0.593-0.452-0.877c-0.122-0.212-0.251-0.416-0.377-0.618c-0.18-0.277-0.362-0.546-0.562-0.806
+        c-0.146-0.194-0.3-0.39-0.454-0.577c-0.212-0.243-0.432-0.487-0.664-0.716c-0.174-0.178-0.346-0.357-0.528-0.521
+        c-0.244-0.219-0.496-0.431-0.752-0.633c-0.198-0.155-0.395-0.31-0.602-0.456c-0.078-0.049-0.146-0.114-0.22-0.163L257.369,97.656
+        c-4.464-2.976-10.274-2.976-14.738,0l-141.295,94.196c-0.073,0.049-0.142,0.114-0.219,0.163c-0.208,0.146-0.403,0.301-0.598,0.456
+        c-0.26,0.203-0.512,0.415-0.752,0.633c-0.187,0.164-0.357,0.342-0.533,0.521c-0.231,0.229-0.451,0.473-0.658,0.716
+        c-0.159,0.188-0.313,0.383-0.459,0.577c-0.195,0.26-0.383,0.529-0.557,0.806c-0.134,0.203-0.26,0.406-0.382,0.618
+        c-0.163,0.284-0.309,0.577-0.451,0.877c-0.102,0.211-0.208,0.431-0.297,0.651c-0.13,0.317-0.236,0.642-0.341,0.968
+        c-0.07,0.211-0.146,0.422-0.208,0.642c-0.097,0.366-0.162,0.74-0.231,1.114c-0.032,0.195-0.081,0.382-0.106,0.577
+        c-0.077,0.569-0.122,1.146-0.122,1.732v94.197c0,0.585,0.044,1.162,0.122,1.74c0.025,0.188,0.074,0.382,0.106,0.568
+        c0.069,0.374,0.134,0.748,0.231,1.114c0.062,0.22,0.138,0.432,0.208,0.643c0.105,0.324,0.211,0.65,0.341,0.975
+        c0.089,0.222,0.195,0.433,0.297,0.645c0.143,0.3,0.289,0.592,0.451,0.885c0.122,0.204,0.248,0.406,0.382,0.61
+        c0.174,0.276,0.362,0.545,0.557,0.806c0.146,0.203,0.301,0.391,0.459,0.577c0.208,0.243,0.427,0.488,0.658,0.716
+        c0.175,0.178,0.346,0.357,0.533,0.52c0.24,0.221,0.492,0.432,0.752,0.635c0.195,0.155,0.391,0.31,0.598,0.454
+        c0.077,0.05,0.146,0.115,0.219,0.163l141.295,94.197c2.231,1.487,4.802,2.236,7.371,2.236c2.566,0,5.135-0.749,7.368-2.236
+        l141.295-94.197c0.074-0.048,0.142-0.113,0.22-0.163c0.207-0.145,0.403-0.299,0.602-0.454c0.256-0.203,0.508-0.414,0.752-0.635
+        c0.183-0.162,0.354-0.342,0.528-0.52c0.232-0.228,0.452-0.473,0.664-0.716c0.154-0.187,0.308-0.374,0.454-0.577
+        c0.2-0.261,0.383-0.529,0.562-0.806c0.126-0.204,0.255-0.406,0.377-0.61c0.167-0.293,0.312-0.585,0.452-0.885
+        c0.101-0.212,0.206-0.423,0.297-0.645c0.13-0.324,0.235-0.65,0.342-0.975c0.068-0.211,0.149-0.423,0.206-0.643
+        c0.098-0.366,0.167-0.74,0.232-1.114c0.033-0.187,0.081-0.381,0.109-0.568c0.073-0.578,0.119-1.155,0.119-1.74v-94.197
+        C404.581,202.318,404.535,201.741,404.462,201.172z M263.286,133.533l104.088,69.387l-46.493,31.103l-57.595-38.527V133.533z
+         M236.715,133.533v61.963l-57.592,38.527l-46.497-31.103L236.715,133.533z M121.99,227.771l33.238,22.231l-33.238,22.233V227.771z
+         M236.715,366.471l-104.088-69.388l46.497-31.094l57.592,38.52V366.471z M250.001,281.431l-46.988-31.429l46.988-31.428
+        l46.985,31.428L250.001,281.431z M263.286,366.471v-61.962l57.595-38.52l46.493,31.094L263.286,366.471z M378.01,272.234
+        l-33.233-22.233l33.233-22.231V272.234z"></path></g></svg></button></form> <form target="_blank" action="https://jsfiddle.net/api/post/library/pure" method="post" class="demo-and-code-codepen-wrapper"><!----> <input type="hidden" name="js" value="new Vue({
+	el: '#app', 
+	
+})"> <input type="hidden" name="css"> <input type="hidden" name="html" value="&lt;div id=&quot;app&quot;&gt;
+
+&lt;p&gt;
+    this is &lt;span style=&quot;color: red;&quot;&gt;common&lt;/span&gt; html
+&lt;/p&gt;
+
+&lt;/div&gt;"> <input type="hidden" name="panel_js" value="3"> <input type="hidden" name="resources" value="https://unpkg.com/vue/dist/vue.js"> <button type="submit" data-tip="jsfiddle"><svg t="1547088289967" viewBox="0 0 1170 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1952" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon"><path d="M1028.571429 441.142857q63.428571 26.285714 102.571428 83.142857T1170.285714 650.857143q0 93.714286-67.428571 160.285714T940 877.714286q-2.285714 0-6.571429-0.285715t-6-0.285714H232q-97.142857-5.714286-164.571429-71.714286T0 645.142857q0-62.857143 31.428571-116t84-84q-6.857143-22.285714-6.857142-46.857143 0-65.714286 46.857142-112t113.714286-46.285714q54.285714 0 98.285714 33.142857 42.857143-88 127.142858-141.714286t186.571428-53.714285q94.857143 0 174.857143 46T982.571429 248.571429t46.571428 172q0 3.428571-0.285714 10.285714t-0.285714 10.285714zM267.428571 593.142857q0 69.714286 48 110.285714t118.857143 40.571429q78.285714 0 137.142857-56.571429-9.142857-11.428571-27.142857-32.285714T519.428571 626.285714q-38.285714 37.142857-82.285714 37.142857-31.428571 0-53.428571-19.142857T361.714286 594.285714q0-30.285714 22-49.714285t52.285714-19.428572q25.142857 0 48.285714 12t41.714286 31.428572 37.142857 42.857142 39.428572 46.857143 44 42.857143 55.428571 31.428572 69.428571 12q69.142857 0 116.857143-40.857143T936 594.857143q0-69.142857-48-109.714286t-118.285714-40.571428q-81.714286 0-137.714286 55.428571l53.142857 61.714286q37.714286-36.571429 81.142857-36.571429 29.714286 0 52.571429 18.857143t22.857143 48q0 32.571429-21.142857 52.285714t-53.714286 19.714286q-24.571429 0-47.142857-12t-41.142857-31.428571-37.428572-42.857143-39.714286-46.857143-44.285714-42.857143-55.142857-31.428571T434.285714 444.571429q-69.714286 0-118.285714 40.285714T267.428571 593.142857z" p-id="1953"></path></svg></button></form></div></div> <div class="code-wrapper" style="max-height:9999px;"><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
     this is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>common<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> html
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
 </code></pre></div></div></section></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/BuptStEve/vuepress-plugin-demo-code/edit/master/docs/zh/example/README.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/vuepress-plugin-demo-code/assets/js/app.a93e2939.js" defer></script><script src="/vuepress-plugin-demo-code/assets/js/2.11b09fe7.js" defer></script><script src="/vuepress-plugin-demo-code/assets/js/8.a4f28d3a.js" defer></script>
+    <script src="/vuepress-plugin-demo-code/assets/js/app.e3166ad0.js" defer></script><script src="/vuepress-plugin-demo-code/assets/js/2.2b717d65.js" defer></script><script src="/vuepress-plugin-demo-code/assets/js/8.8fa5808f.js" defer></script>
   </body>
 </html>
