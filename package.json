@@ -3,9 +3,11 @@
     "version": "0.2.1",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
-    "files": ["src"],
+    "files": [
+        "src"
+    ],
     "scripts": {
-        "docs": "vuepress dev docs --host localhost",
+        "docs": "vuepress dev docs",
         "docs:build": "vuepress build docs",
         "cov": "open coverage/lcov-report/index.html",
         "tdd": "cross-env NODE_ENV=test jest --watch",

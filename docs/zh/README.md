@@ -90,6 +90,9 @@ module.exports = {
 
 插件的标记，即跟在 `:::` 后的标记。
 
+## Related
+* [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)

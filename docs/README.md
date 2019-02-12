@@ -90,6 +90,9 @@ The height of the code when it is folded.
 
 The mark of the plugin, follows the tag after `:::`.
 
+## Related
+* [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
