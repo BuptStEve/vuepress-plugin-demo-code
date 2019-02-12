@@ -6,11 +6,11 @@
     <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License"></a>
 </p>
 
-English | [简体中文](./zh/)
+[English](README.md) | 简体中文
 
 > demo-code plugin for vuepress.
 
-With this plugin, you can both display demo and code via following syntax.
+借助这个插件，你可以通过下述的语法在展示 demo 的同时，将这段代码展示出来。
 
 ```md
 ::: demo
@@ -26,13 +26,13 @@ export default {
 :::
 ```
 
-[Please click here to see the demo](./example/)
+[实际效果请点击这里](https://buptsteve.github.io/vuepress-plugin-demo-code/zh/example/)
 
 ## Install
 
-* First, install [vuepress v1.x](https://github.com/vuejs/vuepress)
+* 首先安装 [vuepress v1.x](https://github.com/vuejs/vuepress)
 
-* Then install plugin
+* 接着安装插件
 
 ```bash
 $ npm i -D vuepress-plugin-demo-code
@@ -41,7 +41,7 @@ $ yarn add -D vuepress-plugin-demo-code
 ```
 
 ## Usage
-Write vuepress config
+配置 vuepress config
 
 ```js
 module.exports = {
@@ -50,7 +50,7 @@ module.exports = {
 ```
 
 ## Options
-This plugin supports the following configurations.
+插件支持以下配置
 
 ```js
 module.exports = {
@@ -67,28 +67,28 @@ module.exports = {
 ```
 
 ### showText
-* Type: `String`
-* Default: `show code`
+* 类型：`String`
+* 默认值：`show code`
 
-The display text of unfold code button.
+展开代码按钮的文案。
 
 ### hideText
-* Type: `String`
-* Default: `hide code`
+* 类型：`String`
+* 默认值：`hide code`
 
-The display text of fold code button.
+收起代码按钮的文案。
 
 ### minHeight
-* Type: `Number`
-* Default: `200`(px)
+* 类型：`Number`
+* 默认值：`200`(px)
 
-The height of the code when it is folded.
+代码收起时的高度。
 
 ### demoCodeMark
-* Type: `String`
-* Default: `demo`
+* 类型：`String`
+* 默认值：`demo`
 
-The mark of the plugin, follows the tag after `:::`.
+插件的标记，即跟在 `:::` 后的标记。
 
 ## License
 
