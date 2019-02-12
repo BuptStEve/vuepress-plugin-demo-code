@@ -28,6 +28,17 @@ export default {
 
 [实际效果请点击这里](https://buptsteve.github.io/vuepress-plugin-demo-code/zh/example/)
 
+## Features
+* 只有一份代码同时生成 demo 和 code
+* 代码可折叠
+* 支持在线编辑
+  * Codepen
+  * JSFiddle
+  * CodeSandbox
+* 专门为浏览长代码进行了设计
+  * Sticky 的收起按钮
+  * 点击收起按钮时自动滚动到代码的顶部
+
 ## Install
 
 * 首先安装 [vuepress v1.x](https://github.com/vuejs/vuepress)
@@ -56,6 +67,13 @@ module.exports = {
 module.exports = {
     plugins: [
         ['demo-code', {
+            jsLibs: [
+                // umd
+                'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
+            ],
+            cssLibs: [
+                'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+            ],
             showText: 'show code',
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
@@ -65,6 +83,18 @@ module.exports = {
     ],
 }
 ```
+
+### jsLibs
+* Type: `Array`
+* Default: `[]`
+
+展示 demo 所需的 js 库。
+
+### cssLibs
+* Type: `Array`
+* Default: `[]`
+
+展示 demo 所需的 css 库。
 
 ### showText
 * 类型：`String`

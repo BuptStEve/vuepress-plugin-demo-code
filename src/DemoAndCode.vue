@@ -121,7 +121,7 @@ export default {
             const { top: codeTop, height: codeHeight } = codeWrapper.getBoundingClientRect()
             const { height: navbarHeight } = navbar.getBoundingClientRect()
 
-            this.scrollTop = window.scrollY + codeTop - navbarHeight
+            this.scrollTop = window.scrollY + codeTop - navbarHeight - 35
             this.codeHeight = codeHeight
             this.navbarHeight = navbarHeight
         },

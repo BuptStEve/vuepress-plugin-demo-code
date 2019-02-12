@@ -28,6 +28,17 @@ export default {
 
 [Please click here to see the demo](https://buptsteve.github.io/vuepress-plugin-demo-code/example/)
 
+## Features
+* Only one source code
+* Foldable code
+* Online edit support
+  * Codepen
+  * Jsfiddle
+  * CodeSandbox
+* Designed for long code
+  * Sticky fold button
+  * Auto scroll to top when you fold code
+
 ## Install
 
 * First, install [vuepress v1.x](https://github.com/vuejs/vuepress)
@@ -56,6 +67,13 @@ This plugin supports the following configurations.
 module.exports = {
     plugins: [
         ['demo-code', {
+            jsLibs: [
+                // umd
+                'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
+            ],
+            cssLibs: [
+                'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+            ],
             showText: 'show code',
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
@@ -65,6 +83,18 @@ module.exports = {
     ],
 }
 ```
+
+### jsLibs
+* Type: `Array`
+* Default: `[]`
+
+Js libraries for the demo.
+
+### cssLibs
+* Type: `Array`
+* Default: `[]`
+
+Css libraries for the demo.
 
 ### showText
 * Type: `String`
