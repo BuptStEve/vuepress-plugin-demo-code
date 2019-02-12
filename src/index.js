@@ -6,6 +6,8 @@ module.exports = (options) => {
     const {
         demoCodeMark = 'demo',
         // props
+        jsLibs = [],
+        cssLibs = [],
         showText = 'show code',
         hideText = 'hide code',
         minHeight = 200,
@@ -49,8 +51,11 @@ module.exports = (options) => {
 
                     return `
                         <DemoAndCode
+                            htmlStr="${encodeURIComponent(htmlStr)}"
                             showText="${showText}"
                             hideText="${hideText}"
+                            jsLibsStr="${encodeURIComponent(JSON.stringify(jsLibs))}"
+                            cssLibsStr="${encodeURIComponent(JSON.stringify(cssLibs))}"
                             :minHeight="${minHeight}"
                         >
                             <template slot="code">

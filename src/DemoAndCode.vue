@@ -3,14 +3,20 @@
         <slot name="demo" />
 
         <div
-            v-show="isShowControl"
             ref="codeControl"
             class="code-control"
             @click="onClickControl"
             :style="codeControlStyle"
         >
-            {{ controlText }}
-            <div class="icon" :style="iconStyle" />
+            <span v-show="isShowControl">
+                {{ controlText }}
+                <div class="arrow-icon" :style="iconStyle" />
+            </span>
+
+            <div class="online-wrapper" @click.stop>
+                <OnlineEdit v-bind="parsedCode" platform="codepen" />
+                <OnlineEdit v-bind="parsedCode" platform="jsfiddle" />
+            </div>
         </div>
 
         <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
@@ -20,11 +26,21 @@
 </template>
 
 <script>
+import OnlineEdit from './OnlineEdit.vue'
+import { JS_RE, CSS_RE, HTML_RE } from './constants'
+import { getJsTmpl, getHtmlTmpl, getMatchedResult } from './utils'
+
 export default {
     name: 'DemoAndCode',
+    components: {
+        OnlineEdit,
+    },
     props: {
+        htmlStr: { type: String, default: '' },
         showText: { type: String, default: 'show code' },
         hideText: { type: String, default: 'hide code' },
+        jsLibsStr: { type: String, default: '[]' },
+        cssLibsStr: { type: String, default: '[]' },
         minHeight: {
             type: Number,
             default: 200,
@@ -43,13 +59,13 @@ export default {
     },
     computed: {
         // icon animation
-        iconStyle : (vm) => ({
+        iconStyle: (vm) => ({
             transform: vm.isShowCode
                 ? 'rotate(0)'
                 : 'rotate(-180deg)',
         }),
         // button text
-        controlText: vm => vm.isShowCode
+        controlText: (vm) => vm.isShowCode
             ? vm.hideText
             : vm.showText,
         // animation
@@ -63,7 +79,31 @@ export default {
             top: vm.isShowCode
                 ? `${vm.navbarHeight}px`
                 : '0',
+            cursor: vm.isShowControl
+                ? 'pointer'
+                : 'auto',
         }),
+        parsedCode: (vm) => {
+            const source = decodeURIComponent(vm.htmlStr)
+
+            const js = getMatchedResult(JS_RE)(source) || ''
+            const html = getMatchedResult(HTML_RE)(source) || source
+                .replace(JS_RE, '')
+                .replace(CSS_RE, '')
+                .replace(HTML_RE, '')
+                .trim()
+            const vueJs = 'https://unpkg.com/vue/dist/vue.js'
+            const jsLibs = JSON.parse(decodeURIComponent(vm.jsLibsStr))
+            const cssLibs = JSON.parse(decodeURIComponent(vm.cssLibsStr))
+
+            return {
+                js: getJsTmpl(js),
+                css: getMatchedResult(CSS_RE)(source),
+                html: getHtmlTmpl(html),
+                jsLibs: jsLibs.concat(vueJs),
+                cssLibs: cssLibs,
+            }
+        },
     },
     methods: {
         onClickControl () {
@@ -94,12 +134,16 @@ export default {
         if (this.codeHeight < this.minHeight) {
             this.isShowControl = false
         }
+
+        console.log(this.parsedCode)
     },
 }
 </script>
 
 <style lang="stylus">
-html, body {
+
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -111,9 +155,9 @@ html, body {
         z-index: 10;
 
         width: 100%;
+        height: 50px;
         margin-bottom: -.85rem;
 
-        cursor: pointer;
         text-align: center;
 
         background-color: #fff;
@@ -121,16 +165,25 @@ html, body {
         font-size: 20px;
         line-height: 50px;
 
-        .icon {
+        .arrow-icon {
             display: inline-block;
 
-            margin-bottom 3px;
+            margin-bottom: 3px;
+
+            transition: transform .3s ease-in-out;
+
             border-top: none;
             border-right: 6px solid transparent;
             border-bottom: 6px solid #2c3e50;
             border-left: 6px solid transparent;
+        }
 
-            transition: transform .3s ease-in-out;
+        .online-wrapper {
+            position: absolute;
+            top: 0;
+            right: 10px;
+
+            height: 100%;
         }
     }
 
