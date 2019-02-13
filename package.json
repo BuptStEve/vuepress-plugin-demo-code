@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-demo-code",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [
@@ -41,6 +41,7 @@
         ]
     },
     "dependencies": {
+        "codesandbox": "1.1.13",
         "markdown-it-container": "^2.0.0",
         "prismjs": "^1.15.0"
     },

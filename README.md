@@ -32,9 +32,9 @@ export default {
 * Only one source code
 * Foldable code
 * Online edit support
-  * Codepen
-  * Jsfiddle
-  * CodeSandbox
+  * ✔ Codepen
+  * ✔ JSFiddle
+  * ✔ CodeSandbox
 * Designed for long code
   * Sticky fold button
   * Auto scroll to top when you fold code
@@ -81,6 +81,13 @@ module.exports = {
             onlineBtns: {
                 codepen: true,
                 jsfiddle: true,
+                codesandbox: true,
+            },
+            codesandbox: {
+                deps: { 'lodash': 'latest' },
+                json: '',
+                query: '',
+                embed: '',
             },
             demoCodeMark: 'demo-code',
         }]
@@ -120,9 +127,17 @@ The height of the code when it is folded.
 
 ### onlineBtns
 * Type: `Object`
-* Default: `{ codepen: true, jsfiddle: true }`
+* Default: `{ codepen: true, jsfiddle: true, codesandbox: true }`
 
 Display online edit buttons.
+
+### codesandbox
+* Type: `Object`
+* Default: `{ deps: {}, json: '', query: 'module=App.vue'', embed: '' },`
+
+It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
+
+> `deps` is dependencies
 
 ### demoCodeMark
 * Type: `String`

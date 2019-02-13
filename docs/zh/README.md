@@ -32,9 +32,9 @@ export default {
 * 只有一份代码同时生成 demo 和 code
 * 代码可折叠
 * 支持在线编辑
-  * Codepen
-  * JSFiddle
-  * CodeSandbox
+  * ✔ Codepen
+  * ✔ JSFiddle
+  * ✔ CodeSandbox
 * 专门为浏览长代码进行了设计
   * Sticky 的收起按钮
   * 点击收起按钮时自动滚动到代码的顶部
@@ -81,6 +81,13 @@ module.exports = {
             onlineBtns: {
                 codepen: true,
                 jsfiddle: true,
+                codesandbox: true,
+            },
+            codesandbox: {
+                deps: { 'lodash': 'latest' },
+                json: '',
+                query: '',
+                embed: '',
             },
             demoCodeMark: 'demo-code',
         }]
@@ -89,13 +96,13 @@ module.exports = {
 ```
 
 ### jsLibs
-* 类型： `Array`
+* 类型：`Array`
 * 默认值：`[]`
 
 展示 demo 所需的 js 库。
 
 ### cssLibs
-* 类型： `Array`
+* 类型：`Array`
 * 默认值：`[]`
 
 展示 demo 所需的 css 库。
@@ -119,10 +126,18 @@ module.exports = {
 代码收起时的高度。
 
 ### onlineBtns
-* 类型： `Object`
-* 默认值：`{ codepen: true, jsfiddle: true }`
+* 类型：`Object`
+* 默认值：`{ codepen: true, jsfiddle: true, codesandbox: true }`
 
 展示哪些在线编辑的按钮。
+
+### codesandbox
+* 类型：`Object`
+* 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' },`
+
+It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
+
+> `deps` is dependencies
 
 ### demoCodeMark
 * 类型：`String`

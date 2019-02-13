@@ -14,8 +14,13 @@
             </span>
 
             <div class="online-wrapper" @click.stop>
-                <OnlineEdit v-show="showOnlineBtns.codepen" v-bind="parsedCode" platform="codepen" />
-                <OnlineEdit v-show="showOnlineBtns.jsfiddle" v-bind="parsedCode" platform="jsfiddle" />
+                <OnlineEdit
+                    v-for="platform in platforms"
+                    :key="platform"
+                    v-show="showOnlineBtns[platform]"
+                    v-bind="parsedCode"
+                    :platform="platform"
+                />
             </div>
         </div>
 
@@ -27,8 +32,16 @@
 
 <script>
 import OnlineEdit from './OnlineEdit.vue'
-import { JS_RE, CSS_RE, HTML_RE } from './constants'
-import { getJsTmpl, getHtmlTmpl, parseAndDecode, getMatchedResult } from './utils'
+import {
+    JS_RE,
+    CSS_RE,
+    HTML_RE,
+    PLATFORMS,
+} from './constants'
+import {
+    parseAndDecode,
+    getMatchedResult,
+} from './utils'
 
 export default {
     name: 'DemoAndCode',
@@ -47,10 +60,12 @@ export default {
             validator: val => val >= 0,
         },
         onlineBtnsStr: { type: String, default: '{}' },
+        codesandboxStr: { type: String, default: '{}' },
     },
     data () {
         return {
             scrollTop: 0,
+            platforms: PLATFORMS,
             codeHeight: 9999,
             navbarHeight: 0,
 
@@ -88,31 +103,20 @@ export default {
             const source = decodeURIComponent(vm.htmlStr)
 
             const js = getMatchedResult(JS_RE)(source) || ''
+            const css = getMatchedResult(CSS_RE)(source) || ''
             const html = getMatchedResult(HTML_RE)(source) || source
                 .replace(JS_RE, '')
                 .replace(CSS_RE, '')
                 .replace(HTML_RE, '')
                 .trim()
-            const vueJs = 'https://unpkg.com/vue/dist/vue.js'
+
             const jsLibs = parseAndDecode(vm.jsLibsStr)
             const cssLibs = parseAndDecode(vm.cssLibsStr)
+            const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
 
-            return {
-                js: getJsTmpl(js),
-                css: getMatchedResult(CSS_RE)(source),
-                html: getHtmlTmpl(html),
-                jsLibs: jsLibs.concat(vueJs),
-                cssLibs: cssLibs,
-            }
+            return { js, css, html, jsLibs, cssLibs, codesandboxOptions }
         },
-        showOnlineBtns: (vm) => {
-            const onlineBtns = parseAndDecode(vm.onlineBtnsStr)
-
-            return {
-                codepen: !!onlineBtns.codepen,
-                jsfiddle: !!onlineBtns.jsfiddle,
-            }
-        },
+        showOnlineBtns: vm => parseAndDecode(vm.onlineBtnsStr),
     },
     methods: {
         onClickControl () {
