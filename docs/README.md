@@ -1,10 +1,17 @@
 <h1 align="center">vuepress-plugin-demo-code</h1>
 
 <p align="center">
-    <a href="https://circleci.com/gh/BuptStEve/vuepress-plugin-demo-code/tree/master"><img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Build Status"></a>
-    <a href="https://codecov.io/github/BuptStEve/vuepress-plugin-demo-code?branch=master"><img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Coverage Status"></a>
-    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version"></a>
-    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License"></a>
+    <a href="https://circleci.com/gh/BuptStEve/vuepress-plugin-demo-code/tree/master" target="_blank">
+        <img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/github/BuptStEve/vuepress-plugin-demo-code?branch=master" target="_blank">
+        <img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Coverage Status">
+    </a>
+    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code" target="_blank">
+        <img src="https://badgen.net/npm/dm/vuepress-plugin-demo-code" alt="Downloads per month">
+        <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version">
+        <img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License">
+    </a>
 </p>
 
 English | [简体中文](./zh/)
