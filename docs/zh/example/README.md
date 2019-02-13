@@ -8,7 +8,7 @@
 ```md
 ::: demo
 <template>
-    <button @click="onClick">Click me!</button>
+    <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>
@@ -31,7 +31,7 @@ button {
 
 ::: demo
 <template>
-    <button @click="onClick">Click me!</button>
+    <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>

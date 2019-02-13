@@ -147,8 +147,6 @@ export default {
         if (this.codeHeight < this.minHeight) {
             this.isShowControl = false
         }
-
-        console.log(this.parsedCode)
     },
 }
 </script>
