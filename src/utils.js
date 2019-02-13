@@ -13,6 +13,7 @@ const getJsTmpl = (js) => {
     return `new Vue({\n\tel: '#app', \n\t${vueAttrs}\n})`
 }
 
+/* istanbul ignore next */
 const getHtmlTmpl = html => `<div id="app">\n\n${html}\n\n</div>`
 
 const getMatchedResult = (re) => (str) => {
@@ -21,12 +22,14 @@ const getMatchedResult = (re) => (str) => {
     return matched && matched[1].trim()
 }
 
+/* istanbul ignore next */
 const urlToHtmlTag = type => url => type === 'js'
     ? `<script src="${url}"></script>\n`
     : type === 'css'
         ? `<link rel="stylesheet" href="${url}">\n`
         : `Error type: js | css`
 
+/* istanbul ignore next */
 const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getParameters({
     files: {
         'main.js': { content: CODE_SANDBOX_JS },

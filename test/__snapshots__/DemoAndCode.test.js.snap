@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DemoAndCode should be rendered 1`] = `
+<section
+  class="demo-and-code-wrapper"
+>
+   
+  <div
+    class="code-control"
+    style="top: 0px; cursor: auto;"
+  >
+    <span
+      style="display: none;"
+    >
+      
+            show code
+            
+      <div
+        class="arrow-icon"
+        style="transform: rotate(-180deg);"
+      />
+    </span>
+     
+    <div
+      class="online-wrapper"
+    >
+      <onlineedit-stub
+        codesandboxoptions="[object Object]"
+        css=""
+        csslibs=""
+        editors="101"
+        html=""
+        js=""
+        jslibs=""
+        jspre="babel"
+        layout="left"
+        platform="codepen"
+        style="display: none;"
+      />
+      <onlineedit-stub
+        codesandboxoptions="[object Object]"
+        css=""
+        csslibs=""
+        editors="101"
+        html=""
+        js=""
+        jslibs=""
+        jspre="babel"
+        layout="left"
+        platform="jsfiddle"
+        style="display: none;"
+      />
+      <onlineedit-stub
+        codesandboxoptions="[object Object]"
+        css=""
+        csslibs=""
+        editors="101"
+        html=""
+        js=""
+        jslibs=""
+        jspre="babel"
+        layout="left"
+        platform="codesandbox"
+        style="display: none;"
+      />
+    </div>
+  </div>
+   
+  <div
+    class="code-wrapper"
+    style="max-height: 200px;"
+  />
+</section>
+`;
