@@ -4,10 +4,10 @@ const { name, description } = require('../../package.json')
 module.exports = {
     base: '/' + name + '/',
     locales: {
-        '/': { lang: 'en-US', title: name, description },
+        '/': { lang: 'en-US', title: 'demo-code', description },
         '/zh/': {
             lang: 'zh-CN',
-            title: name,
+            title: 'demo-code',
             description: '📝 同时展示 demo 和 code 的 vuepress 插件',
         },
     },

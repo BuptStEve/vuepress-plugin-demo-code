@@ -3,7 +3,7 @@
 exports[`OnlineEdit should be rendered 1`] = `
 <form
   action="https://codepen.io/pen/define"
-  class="demo-and-code-codepen-wrapper"
+  class="demo-and-code-online-edit-wrapper"
   method="post"
   target="_blank"
 >

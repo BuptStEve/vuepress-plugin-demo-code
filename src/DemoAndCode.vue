@@ -8,9 +8,9 @@
             @click="onClickControl"
             :style="codeControlStyle"
         >
-            <span v-show="isShowControl">
+            <span class="control-btn" v-show="isShowControl">
                 {{ controlText }}
-                <div class="arrow-icon" :style="iconStyle" />
+                <i class="arrow-icon" :style="iconStyle" />
             </span>
 
             <div class="online-wrapper" @click.stop>
@@ -167,6 +167,9 @@ body {
         position: sticky;
         z-index: 10;
 
+        display: flex;
+        justify-content: space-between;
+
         width: 100%;
         height: 50px;
         margin-bottom: -.85rem;
@@ -178,10 +181,17 @@ body {
         font-size: 20px;
         line-height: 50px;
 
+        .control-btn {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+
         .arrow-icon {
             display: inline-block;
+            align-self: center;
 
-            margin-bottom: 3px;
+            margin-left: 5px;
 
             transition: transform .3s ease-in-out;
 
@@ -192,11 +202,7 @@ body {
         }
 
         .online-wrapper {
-            position: absolute;
-            top: 0;
-            right: 10px;
-
-            height: 100%;
+            margin-right: 5px;
         }
     }
 
@@ -204,6 +210,20 @@ body {
         overflow: hidden;
 
         transition: max-height .6s ease-in-out;
+    }
+}
+
+@media (max-width: 419px) {
+    .demo-and-code-wrapper {
+        margin: 0 -1.5rem;
+
+        .code-wrapper {
+            overflow: auto;
+        }
+
+        div[class*="language-"] {
+            margin: 0 !important;
+        }
     }
 }
 </style>

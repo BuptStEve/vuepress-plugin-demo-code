@@ -10,12 +10,13 @@ exports[`DemoAndCode should be rendered 1`] = `
     style="top: 0px; cursor: auto;"
   >
     <span
+      class="control-btn"
       style="display: none;"
     >
       
             show code
             
-      <div
+      <i
         class="arrow-icon"
         style="transform: rotate(-180deg);"
       />

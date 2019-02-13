@@ -1,6 +1,6 @@
 <template>
     <form
-        class="demo-and-code-codepen-wrapper"
+        class="demo-and-code-online-edit-wrapper"
         target="_blank"
         :action="actionUrl"
         method="post"
@@ -105,7 +105,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.demo-and-code-codepen-wrapper {
+.demo-and-code-online-edit-wrapper {
     display: inline-block;
 
     width: 36px;
