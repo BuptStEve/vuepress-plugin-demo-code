@@ -62,8 +62,8 @@ module.exports = (options = {}) => {
         const {
             jsLibs = [],
             cssLibs = [],
-            showText,
-            hideText,
+            showText = 'show code',
+            hideText = 'hide code',
             minHeight,
         } = options
 
@@ -78,8 +78,8 @@ module.exports = (options = {}) => {
         return `
             <DemoAndCode
                 htmlStr="${encodeURIComponent(htmlStr)}"
-                :showText="${showText}"
-                :hideText="${hideText}"
+                showText="${showText}"
+                hideText="${hideText}"
                 jsLibsStr="${jsLibsStr}"
                 cssLibsStr="${cssLibsStr}"
                 :minHeight="${minHeight}"
