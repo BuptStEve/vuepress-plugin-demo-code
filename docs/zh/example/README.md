@@ -1,4 +1,4 @@
-# Eaxmple
+# Example
 
 ## 常规操作
 直接把 demo 代码用 `::: demo` 和 `:::` 包裹。即可生成可运行的 demo 和代码。
@@ -18,6 +18,12 @@ export default {
     },
 }
 </script>
+
+<style>
+button {
+    color: blue;
+}
+</style>
 :::
 ```
 
@@ -35,6 +41,12 @@ export default {
     },
 }
 </script>
+
+<style>
+button {
+    color: blue;
+}
+</style>
 :::
 
 ## 代码语言
@@ -44,16 +56,28 @@ export default {
 
 ```md
 ::: demo html
-<p>
+<p class="common-html">
     this is <span style="color: red;">common</span> html
 </p>
+
+<style>
+.common-html {
+    color: green;
+}
+</style>
 :::
 ```
 
 ### 实现效果
 
 ::: demo html
-<p>
+<p class="common-html">
     this is <span style="color: red;">common</span> html
 </p>
+
+<style>
+.common-html {
+    color: green;
+}
+</style>
 :::

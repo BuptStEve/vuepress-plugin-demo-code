@@ -13,9 +13,13 @@ module.exports = {
     },
     head: [
         ['link', { rel: 'icon', href: `/favicon.ico` }],
+        ['link', { rel: 'stylesheet', href: `https://unpkg.com/animate.css@3.7.0/animate.min.css` }],
     ],
     plugins: [
         [demoCode, {
+            cssLibs: [
+                'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+            ],
             showText: 'show more',
             hideText: 'hide',
             minHeight: 200,

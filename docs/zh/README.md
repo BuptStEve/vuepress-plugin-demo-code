@@ -28,6 +28,17 @@ export default {
 
 [实际效果请点击这里](./example/)
 
+## Features
+* 只有一份代码同时生成 demo 和 code
+* 代码可折叠
+* 支持在线编辑
+  * ✔ Codepen
+  * ✔ JSFiddle
+  * ✔ CodeSandbox
+* 专门为浏览长代码进行了设计
+  * Sticky 的收起按钮
+  * 点击收起按钮时自动滚动到代码的顶部
+
 ## Install
 
 * 首先安装 [vuepress v1.x](https://github.com/vuejs/vuepress)
@@ -56,15 +67,45 @@ module.exports = {
 module.exports = {
     plugins: [
         ['demo-code', {
+            jsLibs: [
+                // umd
+                'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
+            ],
+            cssLibs: [
+                'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+            ],
             showText: 'show code',
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
             minHeight: 200,
+            onlineBtns: {
+                codepen: true,
+                jsfiddle: true,
+                codesandbox: true,
+            },
+            codesandbox: {
+                deps: { 'lodash': 'latest' },
+                json: '',
+                query: '',
+                embed: '',
+            },
             demoCodeMark: 'demo-code',
         }]
     ],
 }
 ```
+
+### jsLibs
+* 类型：`Array`
+* 默认值：`[]`
+
+展示 demo 所需的 js 库。
+
+### cssLibs
+* 类型：`Array`
+* 默认值：`[]`
+
+展示 demo 所需的 css 库。
 
 ### showText
 * 类型：`String`
@@ -83,6 +124,20 @@ module.exports = {
 * 默认值：`200`(px)
 
 代码收起时的高度。
+
+### onlineBtns
+* 类型：`Object`
+* 默认值：`{ codepen: true, jsfiddle: true, codesandbox: true }`
+
+展示哪些在线编辑的按钮。
+
+### codesandbox
+* 类型：`Object`
+* 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' },`
+
+It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
+
+> `deps` is dependencies
 
 ### demoCodeMark
 * 类型：`String`
