@@ -2,6 +2,7 @@
 
 <p align="center">
     <a href="https://circleci.com/gh/BuptStEve/vuepress-plugin-demo-code/tree/master"><img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Build Status"></a>
+    <a href="https://codecov.io/github/BuptStEve/vuepress-plugin-demo-code?branch=master"><img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Coverage Status"></a>
     <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version"></a>
     <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License"></a>
 </p>

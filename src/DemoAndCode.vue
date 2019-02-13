@@ -88,7 +88,7 @@ export default {
         codeWrapperStyle: (vm) => ({
             'max-height': vm.isShowCode
                 ? `${vm.codeHeight}px`
-                : `${vm.minHeight}px`
+                : `${vm.minHeight}px`,
         }),
         // sticky
         codeControlStyle: (vm) => ({
@@ -129,10 +129,12 @@ export default {
         },
         getDomRect () {
             const navbar = document.querySelector('header.navbar')
-            const { codeControl, codeWrapper } = this.$refs
+            const { codeWrapper } = this.$refs
 
             const { top: codeTop, height: codeHeight } = codeWrapper.getBoundingClientRect()
-            const { height: navbarHeight } = navbar.getBoundingClientRect()
+            const { height: navbarHeight } = navbar
+                ? navbar.getBoundingClientRect()
+                : { height: 0 }
 
             this.scrollTop = window.scrollY + codeTop - navbarHeight - 35
             this.codeHeight = codeHeight

@@ -22,7 +22,6 @@ module.exports = {
             ],
             showText: 'show more',
             hideText: 'hide',
-            minHeight: 200,
         }]
     ],
     evergreen: true,

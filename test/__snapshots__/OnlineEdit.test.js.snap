@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnlineEdit should be rendered 1`] = `
+<form
+  action="https://codepen.io/pen/define"
+  class="demo-and-code-codepen-wrapper"
+  method="post"
+  target="_blank"
+>
+  <input
+    name="data"
+    type="hidden"
+    value="{\\"js\\":\\"new Vue({\\\\n\\\\tel: '#app', \\\\n\\\\t\\\\n})\\",\\"css\\":\\"\\",\\"html\\":\\"<div id=\\\\\\"app\\\\\\">\\\\n\\\\n\\\\n\\\\n</div>\\",\\"layout\\":\\"left\\",\\"editors\\":\\"101\\",\\"js_external\\":\\"https://unpkg.com/vue/dist/vue.js\\",\\"css_external\\":\\"\\",\\"js_pre_processor\\":\\"babel\\"}"
+  />
+   
+  <!---->
+   
+  <!---->
+   
+  <button
+    data-tip="Codepen"
+    type="submit"
+  >
+    <codepen-stub />
+  </button>
+</form>
+`;
