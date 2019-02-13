@@ -14,8 +14,8 @@
             </span>
 
             <div class="online-wrapper" @click.stop>
-                <OnlineEdit v-bind="parsedCode" platform="codepen" />
-                <OnlineEdit v-bind="parsedCode" platform="jsfiddle" />
+                <OnlineEdit v-show="showOnlineBtns.codepen" v-bind="parsedCode" platform="codepen" />
+                <OnlineEdit v-show="showOnlineBtns.jsfiddle" v-bind="parsedCode" platform="jsfiddle" />
             </div>
         </div>
 
@@ -28,7 +28,7 @@
 <script>
 import OnlineEdit from './OnlineEdit.vue'
 import { JS_RE, CSS_RE, HTML_RE } from './constants'
-import { getJsTmpl, getHtmlTmpl, getMatchedResult } from './utils'
+import { getJsTmpl, getHtmlTmpl, parseAndDecode, getMatchedResult } from './utils'
 
 export default {
     name: 'DemoAndCode',
@@ -46,6 +46,7 @@ export default {
             default: 200,
             validator: val => val >= 0,
         },
+        onlineBtnsStr: { type: String, default: '{}' },
     },
     data () {
         return {
@@ -93,8 +94,8 @@ export default {
                 .replace(HTML_RE, '')
                 .trim()
             const vueJs = 'https://unpkg.com/vue/dist/vue.js'
-            const jsLibs = JSON.parse(decodeURIComponent(vm.jsLibsStr))
-            const cssLibs = JSON.parse(decodeURIComponent(vm.cssLibsStr))
+            const jsLibs = parseAndDecode(vm.jsLibsStr)
+            const cssLibs = parseAndDecode(vm.cssLibsStr)
 
             return {
                 js: getJsTmpl(js),
@@ -102,6 +103,14 @@ export default {
                 html: getHtmlTmpl(html),
                 jsLibs: jsLibs.concat(vueJs),
                 cssLibs: cssLibs,
+            }
+        },
+        showOnlineBtns: (vm) => {
+            const onlineBtns = parseAndDecode(vm.onlineBtnsStr)
+
+            return {
+                codepen: !!onlineBtns.codepen,
+                jsfiddle: !!onlineBtns.jsfiddle,
             }
         },
     },

@@ -6,7 +6,7 @@
     <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code"><img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License"></a>
 </p>
 
-English | [简体中文](README_cn.md)
+English | [简体中文](https://buptsteve.github.io/vuepress-plugin-demo-code/zh/)
 
 > demo-code plugin for vuepress.
 
@@ -78,6 +78,10 @@ module.exports = {
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
             minHeight: 200,
+            onlineBtns: {
+                codepen: true,
+                jsfiddle: true,
+            },
             demoCodeMark: 'demo-code',
         }]
     ],
@@ -113,6 +117,12 @@ The display text of fold code button.
 * Default: `200`(px)
 
 The height of the code when it is folded.
+
+### onlineBtns
+* Type: `Object`
+* Default: `{ codepen: true, jsfiddle: true }`
+
+Display online edit buttons.
 
 ### demoCodeMark
 * Type: `String`

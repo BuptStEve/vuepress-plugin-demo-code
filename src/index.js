@@ -1,5 +1,6 @@
 const path = require('path')
 const getCodeHtml = require('./highlight')
+const { encodeAndStringify } = require('./utils')
 const markdownItContainer = require('markdown-it-container')
 
 module.exports = (options) => {
@@ -11,6 +12,10 @@ module.exports = (options) => {
         showText = 'show code',
         hideText = 'hide code',
         minHeight = 200,
+        onlineBtns = {
+            codepen: true,
+            jsfiddle: true,
+        },
     } = options
 
     const END_TYPE = `container_${demoCodeMark}_close`
@@ -49,14 +54,22 @@ module.exports = (options) => {
                         }
                     }
 
+                    const jsLibsStr = encodeAndStringify(jsLibs)
+                    const cssLibsStr = encodeAndStringify(cssLibs)
+                    const onlineBtnsStr = encodeAndStringify(Object.assign({
+                        codepen: true,
+                        jsfiddle: true,
+                    }, onlineBtns))
+
                     return `
                         <DemoAndCode
                             htmlStr="${encodeURIComponent(htmlStr)}"
                             showText="${showText}"
                             hideText="${hideText}"
-                            jsLibsStr="${encodeURIComponent(JSON.stringify(jsLibs))}"
-                            cssLibsStr="${encodeURIComponent(JSON.stringify(cssLibs))}"
+                            jsLibsStr="${jsLibsStr}"
+                            cssLibsStr="${cssLibsStr}"
                             :minHeight="${minHeight}"
+                            onlineBtnsStr="${onlineBtnsStr}"
                         >
                             <template slot="code">
                                 <div class="language-${language} extra-class">

@@ -1,4 +1,4 @@
-# Eaxmple
+# Example
 
 ## 常规操作
 直接把 demo 代码用 `::: demo` 和 `:::` 包裹。即可生成可运行的 demo 和代码。

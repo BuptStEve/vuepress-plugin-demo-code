@@ -17,10 +17,6 @@ module.exports = {
     ],
     plugins: [
         [demoCode, {
-            jsLibs: [
-                // umd
-                'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
-            ],
             cssLibs: [
                 'https://unpkg.com/animate.css@3.7.0/animate.min.css',
             ],

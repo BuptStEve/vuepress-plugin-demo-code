@@ -78,6 +78,10 @@ module.exports = {
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
             minHeight: 200,
+            onlineBtns: {
+                codepen: true,
+                jsfiddle: true,
+            },
             demoCodeMark: 'demo-code',
         }]
     ],
@@ -85,14 +89,14 @@ module.exports = {
 ```
 
 ### jsLibs
-* Type: `Array`
-* Default: `[]`
+* 类型： `Array`
+* 默认值：`[]`
 
 展示 demo 所需的 js 库。
 
 ### cssLibs
-* Type: `Array`
-* Default: `[]`
+* 类型： `Array`
+* 默认值：`[]`
 
 展示 demo 所需的 css 库。
 
@@ -113,6 +117,12 @@ module.exports = {
 * 默认值：`200`(px)
 
 代码收起时的高度。
+
+### onlineBtns
+* 类型： `Object`
+* 默认值：`{ codepen: true, jsfiddle: true }`
+
+展示哪些在线编辑的按钮。
 
 ### demoCodeMark
 * 类型：`String`

@@ -78,6 +78,10 @@ module.exports = {
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
             minHeight: 200,
+            onlineBtns: {
+                codepen: true,
+                jsfiddle: true,
+            },
             demoCodeMark: 'demo-code',
         }]
     ],
@@ -113,6 +117,12 @@ The display text of fold code button.
 * Default: `200`(px)
 
 The height of the code when it is folded.
+
+### onlineBtns
+* Type: `Object`
+* Default: `{ codepen: true, jsfiddle: true }`
+
+Display online edit buttons.
 
 ### demoCodeMark
 * Type: `String`

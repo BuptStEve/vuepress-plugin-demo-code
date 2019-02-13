@@ -15,8 +15,13 @@ const getMatchedResult = (re) => (str) => {
     return matched && matched[1].trim()
 }
 
-export {
+const parseAndDecode = str => JSON.parse(decodeURIComponent(str))
+const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
+
+module.exports = {
     getJsTmpl,
     getHtmlTmpl,
+    parseAndDecode,
     getMatchedResult,
+    encodeAndStringify,
 }
