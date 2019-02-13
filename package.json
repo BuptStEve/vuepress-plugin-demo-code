@@ -16,8 +16,8 @@
         "deploy": "yarn docs:build && gh-pages -u \"BuptStEve <yangzhenyu2016@gmail.com>\" -m \"[ci skip]\" -d docs/.vuepress/dist",
         "next:pm": "npm --no-git-tag-version version preminor",
         "next:pr": "npm --no-git-tag-version version prerelease",
-        "pub": "npm run build && npm publish",
-        "pub:n": "npm run build && npm publish --tag next"
+        "pub": "npm publish",
+        "pub:n": "npm publish --tag next"
     },
     "husky": {
         "hooks": {
