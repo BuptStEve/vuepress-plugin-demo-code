@@ -3,17 +3,14 @@
     "version": "0.3.2",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
-    "files": [
-        "src"
-    ],
+    "files": ["src"],
     "scripts": {
         "cov": "open coverage/lcov-report/index.html",
         "docs": "vuepress dev docs",
         "docs:build": "vuepress build docs",
+        "lint": "eslint --fix src/ test/",
         "test": "cross-env NODE_ENV=test jest",
         "test:tdd": "cross-env NODE_ENV=test jest --watch",
-        "lint": "eslint --fix src/ test/",
-        "deploy": "yarn docs:build && gh-pages -u \"BuptStEve <yangzhenyu2016@gmail.com>\" -m \"[ci skip]\" -d docs/.vuepress/dist",
         "next:pm": "npm --no-git-tag-version version preminor",
         "next:pr": "npm --no-git-tag-version version prerelease",
         "pub": "npm publish",

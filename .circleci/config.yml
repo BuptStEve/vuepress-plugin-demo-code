@@ -44,7 +44,8 @@ jobs:
           fingerprints:
             - f4:67:c7:78:7e:41:42:dd:ef:24:63:eb:67:66:14:c0
       - run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-      - run: yarn deploy
+      - run: yarn docs:build
+      - run: npx gh-pages -u "BuptStEve <yangzhenyu2016@gmail.com>" -m "[ci skip]" -d docs/.vuepress/dist
 
 workflows:
   version: 2
