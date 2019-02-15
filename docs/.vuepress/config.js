@@ -22,8 +22,13 @@ module.exports = {
             ],
             showText: 'show more',
             hideText: 'hide',
-        }]
+        }],
     ],
+    markdown: {
+        extendMarkdown: (md) => {
+            md.use(require('markdown-it-include'))
+        },
+    },
     evergreen: true,
     serviceWorker: true,
     themeConfig: {

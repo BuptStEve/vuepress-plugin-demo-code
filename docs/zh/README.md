@@ -34,7 +34,7 @@ export default {
 :::
 ```
 
-[实际效果请点击这里](./example/)
+[实际效果请点击这里](./example/#实现效果)
 
 ## Features
 * 只有一份代码同时生成 demo 和 code

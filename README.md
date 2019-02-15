@@ -14,7 +14,7 @@
     </a>
 </p>
 
-English | [简体中文](https://buptsteve.github.io/vuepress-plugin-demo-code/zh/)
+English | <a href="https://buptsteve.github.io/vuepress-plugin-demo-code/zh/">简体中文</a>
 
 > demo-code plugin for vuepress.
 
@@ -34,7 +34,7 @@ export default {
 :::
 ```
 
-[Please click here to see the demo](https://buptsteve.github.io/vuepress-plugin-demo-code/example/)
+<a href="https://buptsteve.github.io/vuepress-plugin-demo-code/example/#result">Please click here to see the demo</a>
 
 ## Features
 * Only one source code
