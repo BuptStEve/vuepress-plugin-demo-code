@@ -51,7 +51,7 @@ module.exports = {
                     updatePopup: {
                         message: 'New content is available.',
                         buttonText: 'Refresh',
-                    }
+                    },
                 },
                 nav: [
                     { text: 'Guide', link: '/' },
@@ -59,7 +59,7 @@ module.exports = {
                     {
                         text: 'Ecosystem',
                         items: [
-                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' }
+                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
                         ],
                     },
                 ],
@@ -90,7 +90,7 @@ module.exports = {
                     {
                         text: '生态系统',
                         items: [
-                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' }
+                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
                         ],
                     },
                 ],
