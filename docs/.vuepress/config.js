@@ -1,6 +1,10 @@
 const demoCode = require('../../src/')
 const { name, description } = require('../../package.json')
 
+const ecosystemItems = [
+    { text: '📖markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
+]
+
 module.exports = {
     base: '/' + name + '/',
     locales: {
@@ -44,8 +48,8 @@ module.exports = {
         },
         locales: {
             '/': {
-                selectText: 'Languages',
-                label: 'English',
+                selectText: '🤔Languages',
+                label: '🇺🇸English',
                 editLinkText: 'Edit this page on GitHub',
                 serviceWorker: {
                     updatePopup: {
@@ -54,55 +58,41 @@ module.exports = {
                     },
                 },
                 nav: [
-                    { text: 'Guide', link: '/' },
-                    { text: 'Example', link: '/example/' },
-                    {
-                        text: 'Ecosystem',
-                        items: [
-                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
-                        ],
-                    },
+                    { text: '🌱Guide', link: '/' },
+                    { text: '🧐Example', link: '/example/' },
+                    { text: '🔥Ecosystem', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/example/': [{
-                        title: 'Example',
+                        title: '🧐Example',
                         collapsable: false,
-                        children: [
-                            '',
-                        ],
+                        children: [''],
                     }],
-                    '/': [['', 'Guide']],
+                    '/': [['', '🌱Guide']],
                 },
             },
             '/zh/': {
-                selectText: '选择语言',
-                label: '简体中文',
+                selectText: '🤔选择语言',
+                label: '🇨🇳简体中文',
                 editLinkText: '在 GitHub 上编辑此页',
                 serviceWorker: {
                     updatePopup: {
-                        message: '发现新内容可用。',
+                        message: '文档有更新。',
                         buttonText: '刷新',
                     },
                 },
                 nav: [
-                    { text: '指南', link: '/zh/' },
-                    { text: '示例', link: '/zh/example/' },
-                    {
-                        text: '生态系统',
-                        items: [
-                            { text: 'markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
-                        ],
-                    },
+                    { text: '🌱指南', link: '/zh/' },
+                    { text: '🧐示例', link: '/zh/example/' },
+                    { text: '🔥生态系统', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/zh/example/': [{
-                        title: 'Example',
+                        title: '🧐示例',
                         collapsable: false,
-                        children: [
-                            '',
-                        ],
+                        children: [''],
                     }],
-                    '/zh/': [['', 'Guide']],
+                    '/zh/': [['', '🌱指南']],
                 },
             },
         },
