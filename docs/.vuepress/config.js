@@ -30,7 +30,10 @@ module.exports = {
     ],
     markdown: {
         extendMarkdown: (md) => {
-            md.use(require('markdown-it-include'))
+            md.use(require('markdown-it-include'), {
+                root: './docs/',
+                includeRe: /<\[include\]\((.+)\)/i,
+            })
         },
     },
     evergreen: true,
