@@ -168,7 +168,6 @@ body {
         z-index: 9;
 
         display: flex;
-        overflow: hidden;
         justify-content: space-between;
 
         width: 100%;
@@ -200,10 +199,6 @@ body {
             border-right: 6px solid transparent;
             border-bottom: 6px solid #2c3e50;
             border-left: 6px solid transparent;
-        }
-
-        .online-wrapper {
-            margin-right: 5px;
         }
     }
 

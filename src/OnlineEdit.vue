@@ -108,8 +108,6 @@ export default {
 .demo-and-code-online-edit-wrapper {
     display: inline-block;
 
-    width: 36px;
-
     vertical-align: middle;
 
     button {
@@ -145,7 +143,7 @@ export default {
             }
 
             &:after {
-                top: -6px;
+                top: -7px;
 
                 content: '';
 
