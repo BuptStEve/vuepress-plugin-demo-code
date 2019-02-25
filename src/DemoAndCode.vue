@@ -168,6 +168,7 @@ body {
         z-index: 9;
 
         display: flex;
+        overflow: hidden;
         justify-content: space-between;
 
         width: 100%;
@@ -215,8 +216,6 @@ body {
 
 @media (max-width: 419px) {
     .demo-and-code-wrapper {
-        overflow: hidden;
-
         margin: 0 -1.5rem;
 
         .code-wrapper {
