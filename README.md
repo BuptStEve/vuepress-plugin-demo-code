@@ -39,7 +39,7 @@ export default {
 ## Features
 * Only one source code
 * Foldable code
-* Online edit support
+* Support online editing
   * ✔ Codepen
   * ✔ JSFiddle
   * ✔ CodeSandbox
