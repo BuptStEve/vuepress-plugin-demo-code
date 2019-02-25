@@ -124,7 +124,7 @@ export default {
 
             if (!this.isShowCode) {
                 this.getDomRect()
-                window.scrollTo({ top: this.scrollTop })
+                window.scrollTo({ top: this.scrollTop, behavior: 'smooth' })
             }
         },
         getDomRect () {
@@ -155,8 +155,7 @@ export default {
 
 <style lang="stylus">
 
-html,
-body {
+html {
     scroll-behavior: smooth;
 }
 
