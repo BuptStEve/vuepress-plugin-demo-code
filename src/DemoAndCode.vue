@@ -165,7 +165,7 @@ body {
 
     .code-control {
         position: sticky;
-        z-index: 10;
+        z-index: 9;
 
         display: flex;
         justify-content: space-between;
@@ -215,6 +215,8 @@ body {
 
 @media (max-width: 419px) {
     .demo-and-code-wrapper {
+        overflow: hidden;
+
         margin: 0 -1.5rem;
 
         .code-wrapper {
