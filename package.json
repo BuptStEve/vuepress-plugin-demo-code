@@ -63,7 +63,8 @@
         "markdown-it-include": "^1.1.0",
         "rimraf": "^2.6.3",
         "vue-jest": "^3.0.3",
-        "vuepress": "^1.0.0-alpha.39"
+        "vuepress": "^1.0.0-alpha.39",
+        "vuepress-plugin-smooth-scroll": "^0.0.3"
     },
     "keywords": [
         "vue",
