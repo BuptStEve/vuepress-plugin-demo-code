@@ -49,9 +49,9 @@ export default {
 
 ## Install
 
-* First, install [vuepress v1.x](https://github.com/vuejs/vuepress)
+* First of all, install [vuepress v1.x](https://github.com/vuejs/vuepress)
 
-* Then install plugin
+* Then install the plugin
 
 ```bash
 $ npm i -D vuepress-plugin-demo-code
