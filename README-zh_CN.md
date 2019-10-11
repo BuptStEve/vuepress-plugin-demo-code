@@ -15,11 +15,11 @@
     </a>
 </p>
 
-English | <a href="https://buptsteve.github.io/vuepress-plugin-demo-code/zh/">简体中文</a>
+[English](../) | 简体中文
 
 > demo-code plugin for vuepress.
 
-With this plugin, you can both display demo and code via following syntax.
+借助这个插件，你可以通过下述的语法在展示 demo 的同时，将这段代码展示出来。
 
 ```md
 ::: demo
@@ -35,24 +35,24 @@ export default {
 :::
 ```
 
-<a href="https://buptsteve.github.io/vuepress-plugin-demo-code/example/#result">Please click here to see the demo</a>
+[实际效果请点击这里](./example/#实现效果)
 
 ## Features
-* Only one source code
-* Foldable code
-* Support online editing
+* 只有一份代码同时生成 demo 和 code
+* 代码可折叠
+* 支持在线编辑
   * ✔ Codepen
   * ✔ JSFiddle
   * ✔ CodeSandbox
-* Designed for long code
-  * Sticky fold button
-  * Auto scroll to top when you fold code
+* 专门为浏览长代码进行了设计
+  * Sticky 的收起按钮
+  * 点击收起按钮时自动滚动到代码的顶部
 
 ## Install
 
-* First of all, install [vuepress v1.x](https://github.com/vuejs/vuepress)
+* 首先安装 [vuepress v1.x](https://github.com/vuejs/vuepress)
 
-* Then install the plugin
+* 接着安装插件
 
 ```bash
 $ npm i -D vuepress-plugin-demo-code
@@ -61,7 +61,7 @@ $ yarn add -D vuepress-plugin-demo-code
 ```
 
 ## Usage
-Write vuepress config
+配置 vuepress config
 
 ```js
 module.exports = {
@@ -70,7 +70,7 @@ module.exports = {
 ```
 
 ## Options
-This plugin supports the following configurations.
+插件支持以下配置
 
 ```js
 module.exports = {
@@ -105,54 +105,54 @@ module.exports = {
 ```
 
 ### jsLibs
-* Type: `Array`
-* Default: `[]`
+* 类型：`Array`
+* 默认值：`[]`
 
-Js libraries for the demo.
+展示 demo 所需的 js 库。
 
 ### cssLibs
-* Type: `Array`
-* Default: `[]`
+* 类型：`Array`
+* 默认值：`[]`
 
-Css libraries for the demo.
+展示 demo 所需的 css 库。
 
 ### showText
-* Type: `String`
-* Default: `show code`
+* 类型：`String`
+* 默认值：`show code`
 
-The display text of unfold code button.
+展开代码按钮的文案。
 
 ### hideText
-* Type: `String`
-* Default: `hide code`
+* 类型：`String`
+* 默认值：`hide code`
 
-The display text of fold code button.
+收起代码按钮的文案。
 
 ### minHeight
-* Type: `Number`
-* Default: `200`(px)
+* 类型：`Number`
+* 默认值：`200`(px)
 
-The height of the code when it is folded.
+代码收起时的高度。
 
 ### onlineBtns
-* Type: `Object`
-* Default: `{ codepen: true, jsfiddle: true, codesandbox: true }`
+* 类型：`Object`
+* 默认值：`{ codepen: true, jsfiddle: true, codesandbox: true }`
 
-Display online edit buttons.
+展示哪些在线编辑的按钮。
 
 ### codesandbox
-* Type: `Object`
-* Default: `{ deps: {}, json: '', query: 'module=App.vue'', embed: '' }`
+* 类型：`Object`
+* 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' }`
 
 It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
 
 > `deps` is dependencies
 
 ### demoCodeMark
-* Type: `String`
-* Default: `demo`
+* 类型：`String`
+* 默认值：`demo`
 
-The mark of the plugin, follows the tag after `:::`.
+插件的标记，即跟在 `:::` 后的标记。
 
 ## Related
 * [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)
