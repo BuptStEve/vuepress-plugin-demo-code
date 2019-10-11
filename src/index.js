@@ -47,16 +47,19 @@ module.exports = (options = {}) => {
             const { map, type, content } = tokens[index]
 
             if (type === END_TYPE) break
-            if (type === 'html_block') {
+
+            // add empty lines
+            if (map) {
                 const delta = map[0] - (lastLine || map[1])
 
                 if (delta > 0) {
                     htmlStr += '\n'.repeat(delta)
                 }
 
-                htmlStr += content
                 lastLine = map[1]
             }
+
+            htmlStr += content
         }
 
         const {

@@ -141,7 +141,7 @@ Display online edit buttons.
 
 ### codesandbox
 * Type: `Object`
-* Default: `{ deps: {}, json: '', query: 'module=App.vue'', embed: '' },`
+* Default: `{ deps: {}, json: '', query: 'module=App.vue'', embed: '' }`
 
 It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
 

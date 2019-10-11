@@ -141,7 +141,7 @@ module.exports = {
 
 ### codesandbox
 * 类型：`Object`
-* 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' },`
+* 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' }`
 
 It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
 
