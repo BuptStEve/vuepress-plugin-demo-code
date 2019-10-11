@@ -63,12 +63,12 @@ module.exports = {
                 },
                 nav: [
                     { text: '🌱Guide', link: '/' },
-                    { text: '🧐Example', link: '/example/' },
+                    { text: '😎Example', link: '/example/' },
                     { text: '🔥Ecosystem', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/example/': [{
-                        title: '🧐Example',
+                        title: '😎Example',
                         collapsable: false,
                         children: [''],
                     }],
@@ -87,12 +87,12 @@ module.exports = {
                 },
                 nav: [
                     { text: '🌱指南', link: '/zh/' },
-                    { text: '🧐示例', link: '/zh/example/' },
+                    { text: '😎示例', link: '/zh/example/' },
                     { text: '🔥生态系统', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/zh/example/': [{
-                        title: '🧐示例',
+                        title: '😎示例',
                         collapsable: false,
                         children: [''],
                     }],
