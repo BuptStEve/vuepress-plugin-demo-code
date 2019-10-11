@@ -1,0 +1,37 @@
+{
+  "projectName": "vuepress-plugin-demo-code",
+  "projectOwner": "BuptStEve",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md",
+    "README-zh_CN.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "BuptStEve",
+      "name": "StEve Young",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11501493?v=4",
+      "profile": "https://buptsteve.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "translation"
+      ]
+    },
+    {
+      "login": "leandrofngl",
+      "name": "leandrofngl",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11283636?v=4",
+      "profile": "https://github.com/leandrofngl",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
