@@ -27,12 +27,12 @@ const urlToHtmlTag = type => url => type === 'js'
     ? `<script src="${url}"></script>\n`
     : type === 'css'
         ? `<link rel="stylesheet" href="${url}">\n`
-        : `Error type: js | css`
+        : 'Error type: js | css'
 
 /* istanbul ignore next */
 const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getParameters({
     files: {
-        'main.js': { content: CODE_SANDBOX_JS },
+        'index.js': { content: CODE_SANDBOX_JS },
         'App.vue': {
             content:
                 `<template>\n\n${html}\n\n</template>\n\n` +
