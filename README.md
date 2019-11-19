@@ -168,17 +168,15 @@ Copyright (c) StEve Young
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+<!-- prettier-ignore -->
 <table>
   <tr>
     <td align="center"><a href="https://buptsteve.github.io"><img src="https://avatars2.githubusercontent.com/u/11501493?v=4" width="100px;" alt="StEve Young"/><br /><sub><b>StEve Young</b></sub></a><br /><a href="https://github.com/BuptStEve/vuepress-plugin-demo-code/commits?author=BuptStEve" title="Code">💻</a> <a href="https://github.com/BuptStEve/vuepress-plugin-demo-code/commits?author=BuptStEve" title="Documentation">📖</a> <a href="#infra-BuptStEve" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#translation-BuptStEve" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/leandrofngl"><img src="https://avatars1.githubusercontent.com/u/11283636?v=4" width="100px;" alt="leandrofngl"/><br /><sub><b>leandrofngl</b></sub></a><br /><a href="https://github.com/BuptStEve/vuepress-plugin-demo-code/issues?q=author%3Aleandrofngl" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/tianjianchn"><img src="https://avatars0.githubusercontent.com/u/7612199?v=4" width="100px;" alt="Tian Jian"/><br /><sub><b>Tian Jian</b></sub></a><br /><a href="https://github.com/BuptStEve/vuepress-plugin-demo-code/issues?q=author%3Atianjianchn" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
