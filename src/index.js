@@ -1,7 +1,6 @@
 const path = require('path')
-const getHighlightCodeHtml = require('./highlight')
-const { encodeAndStringify } = require('./utils')
 const markdownItContainer = require('markdown-it-container')
+const { encodeAndStringify } = require('./utils')
 
 const defaults = {
     onlineBtns: {
@@ -81,6 +80,7 @@ module.exports = (options = {}) => {
         return `
             <DemoAndCode
                 htmlStr="${encodeURIComponent(htmlStr)}"
+                language="${language}"
                 showText="${showText}"
                 hideText="${hideText}"
                 jsLibsStr="${jsLibsStr}"
@@ -89,12 +89,6 @@ module.exports = (options = {}) => {
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
             >
-                <template slot="code">
-                    <div class="language-${language} extra-class">
-                        ${getHighlightCodeHtml(htmlStr, language)}
-                    </div>
-                </template>
-
                 <template slot="demo">
         `
     }

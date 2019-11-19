@@ -8,7 +8,7 @@ module.exports = {
         '!src/highlight.js',
         '!src/enhanceAppFile.js',
     ],
-    coveragePathIgnorePatterns: [ '/__snapshots__/' ],
+    coveragePathIgnorePatterns: ['/__snapshots__/'],
     transform: {
         '^.+\\.vue$': 'vue-jest',
         '^.+\\.jsx?$': 'babel-jest',

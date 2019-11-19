@@ -7,19 +7,19 @@ import {
 
 describe('utils', () => {
     it('getJsTmpl', () => {
-        const code = `  export default { data: () => ({}) }\n\n\n`
-        const result = getJsResult(`data: () => ({})`)
+        const code = '  export default { data: () => ({}) }\n\n\n'
+        const result = getJsResult('data: () => ({})')
 
-        expect(getJsTmpl(``)).toBe(getJsResult(``))
+        expect(getJsTmpl('')).toBe(getJsResult(''))
         expect(getJsTmpl(code)).toBe(result)
     })
 
     it('getMatchedResult', () => {
         const re = /export default {(.*)}/
-        const code = `  export default { data: () => ({}) }\n\n\n`
+        const code = '  export default { data: () => ({}) }\n\n\n'
         const result = getMatchedResult(re)(code)
 
-        expect(result).toBe(`data: () => ({})`)
+        expect(result).toBe('data: () => ({})')
     })
 
     it('parseAndDecode and encodeAndStringify', () => {
