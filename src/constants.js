@@ -26,7 +26,7 @@ new Vue({
     components: { App },
 })`
 
-const CODE_SANDBOX_HTML = `\n<div id="app"></div>`
+const CODE_SANDBOX_HTML = '\n<div id="app"></div>'
 
 module.exports = {
     JS_RE,

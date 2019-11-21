@@ -25,13 +25,17 @@
         </div>
 
         <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
-            <slot name="code" />
+            <div
+                v-html="highlightCode"
+                :class="`language-${language}' extra-class`"
+            />
         </div>
     </section>
 </template>
 
 <script>
 import OnlineEdit from './OnlineEdit.vue'
+import getHighlightCodeHtml from './highlight'
 import {
     JS_RE,
     CSS_RE,
@@ -50,6 +54,7 @@ export default {
     },
     props: {
         htmlStr: { type: String, default: '' },
+        language: { type: String, default: 'vue' },
         showText: { type: String, default: 'show code' },
         hideText: { type: String, default: 'hide code' },
         jsLibsStr: { type: String, default: '[]' },
@@ -74,37 +79,28 @@ export default {
         }
     },
     computed: {
+        // button text
+        controlText: (vm) => vm.isShowCode ? vm.hideText : vm.showText,
+        highlightCode: vm => getHighlightCodeHtml(vm.decodedHtmlStr, vm.language),
+        decodedHtmlStr: vm => decodeURIComponent(vm.htmlStr),
+        showOnlineBtns: vm => parseAndDecode(vm.onlineBtnsStr),
         // icon animation
         iconStyle: (vm) => ({
-            transform: vm.isShowCode
-                ? 'rotate(0)'
-                : 'rotate(-180deg)',
+            transform: vm.isShowCode ? 'rotate(0)' : 'rotate(-180deg)',
         }),
-        // button text
-        controlText: (vm) => vm.isShowCode
-            ? vm.hideText
-            : vm.showText,
         // animation
         codeWrapperStyle: (vm) => ({
-            'max-height': vm.isShowCode
-                ? `${vm.codeHeight}px`
-                : `${vm.minHeight}px`,
+            'max-height': vm.isShowCode ? `${vm.codeHeight}px` : `${vm.minHeight}px`,
         }),
         // sticky
         codeControlStyle: (vm) => ({
-            top: vm.isShowCode
-                ? `${vm.navbarHeight}px`
-                : '0',
-            cursor: vm.isShowControl
-                ? 'pointer'
-                : 'auto',
+            top: vm.isShowCode ? `${vm.navbarHeight}px` : '0',
+            cursor: vm.isShowControl ? 'pointer' : 'auto',
         }),
         parsedCode: (vm) => {
-            const source = decodeURIComponent(vm.htmlStr)
-
-            const js = getMatchedResult(JS_RE)(source) || ''
-            const css = getMatchedResult(CSS_RE)(source) || ''
-            const html = getMatchedResult(HTML_RE)(source) || source
+            const js = getMatchedResult(JS_RE)(vm.decodedHtmlStr) || ''
+            const css = getMatchedResult(CSS_RE)(vm.decodedHtmlStr) || ''
+            const html = getMatchedResult(HTML_RE)(vm.decodedHtmlStr) || vm.decodedHtmlStr
                 .replace(JS_RE, '')
                 .replace(CSS_RE, '')
                 .replace(HTML_RE, '')
@@ -116,7 +112,6 @@ export default {
 
             return { js, css, html, jsLibs, cssLibs, codesandboxOptions }
         },
-        showOnlineBtns: vm => parseAndDecode(vm.onlineBtnsStr),
     },
     methods: {
         onClickControl () {

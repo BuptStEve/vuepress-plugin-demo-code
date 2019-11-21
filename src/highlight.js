@@ -1,15 +1,10 @@
-// copy from https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/markdown/lib/highlight.js
+// https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/markdown/lib/highlight.js
 
 const prism = require('prismjs')
+const escapeHtml = require('escape-html')
 const loadLanguages = require('prismjs/components/index')
-const {
-    logger,
-    chalk,
-    escapeHtml,
-} = require('@vuepress/shared-utils')
 
-// required to make embedded highlighting work...
-loadLanguages(['markup', 'css', 'javascript'])
+// loadLanguages(['markup', 'css', 'javascript'])
 
 function wrap (code, lang) {
     if (lang === 'text') {
@@ -18,29 +13,38 @@ function wrap (code, lang) {
     return `<pre v-pre class="language-${lang}"><code>${code}</code></pre>`
 }
 
+function getLangCodeFromExtension (extension) {
+    const extensionMap = {
+        vue: 'markup',
+        html: 'markup',
+        md: 'markdown',
+        rb: 'ruby',
+        ts: 'typescript',
+        py: 'python',
+        sh: 'bash',
+        yml: 'yaml',
+        styl: 'stylus',
+        kt: 'kotlin',
+        rs: 'rust',
+    }
+
+    return extensionMap[extension] || extension
+}
+
 module.exports = (str, lang) => {
     if (!lang) {
         return wrap(str, 'text')
     }
     lang = lang.toLowerCase()
     const rawLang = lang
-    if (lang === 'vue' || lang === 'html') {
-        lang = 'markup'
-    }
-    if (lang === 'md') {
-        lang = 'markdown'
-    }
-    if (lang === 'ts') {
-        lang = 'typescript'
-    }
-    if (lang === 'py') {
-        lang = 'python'
-    }
+
+    lang = getLangCodeFromExtension(lang)
+
     if (!prism.languages[lang]) {
         try {
             loadLanguages([lang])
         } catch (e) {
-            logger.warn(chalk.yellow(`[vuepress] Syntax highlight for language "${lang}" is not supported.`))
+            console.warn(`[vuepress] Syntax highlight for language "${lang}" is not supported.`)
         }
     }
     if (prism.languages[lang]) {
