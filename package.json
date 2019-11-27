@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-demo-code",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [

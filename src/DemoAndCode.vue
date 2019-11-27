@@ -27,7 +27,7 @@
         <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
             <div
                 v-html="highlightCode"
-                :class="`language-${language}' extra-class`"
+                :class="`language-${language} extra-class`"
             />
         </div>
     </section>
