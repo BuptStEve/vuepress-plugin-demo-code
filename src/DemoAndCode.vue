@@ -157,6 +157,19 @@ html {
 .demo-and-code-wrapper {
     padding: 20px 0;
 
+    // for vuepress-plugin-code-copy
+    .code-copy {
+        position: absolute;
+        top: 20px;
+        right: 0;
+
+        opacity: 1;
+
+        svg {
+            right: 10px;
+        }
+    }
+
     .code-control {
         position: sticky;
         z-index: 9;
