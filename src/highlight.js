@@ -1,8 +1,9 @@
-// https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/markdown/lib/highlight.js
-
 const prism = require('prismjs')
 const escapeHtml = require('escape-html')
 const loadLanguages = require('prismjs/components/index')
+
+// prevent Prism calling `highlightAll`
+prism.manual = true
 
 // loadLanguages(['markup', 'css', 'javascript'])
 
