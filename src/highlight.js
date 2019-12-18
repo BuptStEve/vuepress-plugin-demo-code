@@ -1,11 +1,11 @@
+if (typeof window !== 'undefined') {
+    // prevent highlighting automatically
+    window.Prism = { manual: true }
+}
+
 const prism = require('prismjs')
 const escapeHtml = require('escape-html')
 const loadLanguages = require('prismjs/components/index')
-
-// prevent Prism calling `highlightAll`
-prism.manual = true
-
-// loadLanguages(['markup', 'css', 'javascript'])
 
 function wrap (code, lang) {
     if (lang === 'text') {
