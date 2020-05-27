@@ -52,9 +52,20 @@ module.exports = (options = {}) => {
         const language = (info.split(demoCodeMark)[1] || 'vue').trim()
 
         for (let index = idx; index < tokens.length; index++) {
-            const { map, type, content } = tokens[index]
-
+            const { map, type } = tokens[index]
             if (type === END_TYPE) break
+
+            let { content } = tokens[index]
+
+            // this means users use 4 space to indent the demo code,
+            // which shouldn't be interpreted as another new <code>
+            if (type === 'code_block') {
+                const indent = ' '.repeat(4)
+                content = `${indent}${content.replace('\n', `\n${indent}`)}`
+            }
+
+            // consider every token as html_block to render as raw string, instead of markdown text
+            tokens[index].type = 'html_block'
 
             // add empty lines
             if (map) {
