@@ -7,8 +7,12 @@ describe('DemoAndCode', () => {
     let wrapper
 
     beforeEach(() => {
+        const div = document.createElement('div')
+        div.id = 'root'
+        document.body.appendChild(div)
+
         wrapper = shallowMount(DemoAndCode, {
-            attachToDocument: true,
+            attachTo: '#root',
         })
     })
 
