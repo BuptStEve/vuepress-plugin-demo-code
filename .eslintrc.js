@@ -4,7 +4,7 @@ module.exports = {
         parser: 'babel-eslint',
         sourceType: 'module',
         ecmaFeatures: {
-            legacyDecorators: true
+            legacyDecorators: true,
         },
     },
     env: {
@@ -19,7 +19,7 @@ module.exports = {
     ],
     plugins: ['vue'],
     rules: {
-        'indent': [2, 4],
+        indent: [2, 4],
         'promise/param-names': 0,
         'comma-dangle': [2, 'always-multiline'],
     },
