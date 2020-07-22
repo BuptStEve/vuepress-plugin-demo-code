@@ -1,4 +1,4 @@
-const { getParameters } = require('codesandbox/lib/api/define')
+const { getParameters } = require('codesandbox-import-utils/lib/api/define')
 const {
     CODE_SANDBOX_JS,
     CODE_SANDBOX_HTML,
