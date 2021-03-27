@@ -6,7 +6,7 @@ const PLATFORMS = ['codepen', 'jsfiddle', 'codesandbox']
 
 const ACTION_MAP = {
     codepen: 'https://codepen.io/pen/define',
-    jsfiddle: 'https://jsfiddle.net/api/post/library/pure',
+    jsfiddle: 'https://jsfiddle.net/api/post/',
     codesandbox: 'https://codesandbox.io/api/v1/sandboxes/define',
 }
 
