@@ -109,8 +109,9 @@ export default {
             const jsLibs = parseAndDecode(vm.jsLibsStr)
             const cssLibs = parseAndDecode(vm.cssLibsStr)
             const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
+            const jsfiddleOptions = parseAndDecode(vm.jsfiddleStr)
 
-            return { js, css, html, jsLibs, cssLibs, codesandboxOptions }
+            return { js, css, html, jsLibs, cssLibs, codesandboxOptions, jsfiddleOptions }
         },
     },
     methods: {

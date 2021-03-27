@@ -72,11 +72,17 @@ export default {
         cssLibs: { type: Array, default: () => [] },
         editors: { type: String, default: '101' },
         codesandboxOptions: { type: Object, default: () => ({}) },
+        jsfiddleOptions: { type: Object, default: () => ({}) },
     },
     computed: {
         jsTmpl: vm => getJsTmpl(vm.js),
         htmlTmpl: vm => getHtmlTmpl(vm.html),
-        actionUrl: vm => ACTION_MAP[vm.platform],
+        actionUrl: vm => {
+            if (vm.platform === 'jsfiddle'){
+                return ACTION_MAP[vm.platform] + vm.jsfiddleOptions.framework;
+            }
+            return ACTION_MAP[vm.platform];
+        },
         resources: vm => vm.jsLibsWithVue.concat(vm.cssLibs).join(','),
         js_external: vm => vm.jsLibsWithVue.join(';'),
         platformTip: vm => PLATFORM_TIP_MAP[vm.platform],
