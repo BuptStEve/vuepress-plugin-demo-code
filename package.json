@@ -42,7 +42,7 @@
         "@babel/preset-env": "^7.10.4",
         "@commitlint/cli": "^9.1.2",
         "@commitlint/config-conventional": "^9.1.1",
-        "@vue/test-utils": "^1.0.3",
+        "@vue/test-utils": "^1.2.1",
         "all-contributors-cli": "^6.16.1",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",

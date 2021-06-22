@@ -64,6 +64,7 @@ export default {
             default: 200,
             validator: val => val >= 0,
         },
+        jsfiddleStr: { type: String, default: '{}' },
         onlineBtnsStr: { type: String, default: '{}' },
         codesandboxStr: { type: String, default: '{}' },
     },
