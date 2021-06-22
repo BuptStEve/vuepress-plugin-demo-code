@@ -33,7 +33,8 @@ module.exports = {
         extendMarkdown: (md) => {
             md.use(require('markdown-it-include'), {
                 root: './docs/',
-                includeRe: /<\[include\]\((.+)\)/i,
+                includeRe: /<\[include\](.+)/i,
+                bracesAreOptional: true,
             })
         },
     },
