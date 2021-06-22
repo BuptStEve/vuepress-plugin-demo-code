@@ -25,6 +25,11 @@
             "eslint --fix"
         ]
     },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
     "dependencies": {
         "codesandbox-import-utils": "^2.2.3",
         "markdown-it-container": "^3.0.0",
@@ -42,6 +47,7 @@
         "babel-eslint": "^10.1.0",
         "codecov": "^3.8.2",
         "cross-env": "^7.0.3",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "^7.29.0",
         "eslint-config-standard": "^16.0.3",
         "eslint-config-vue": "^2.0.2",
