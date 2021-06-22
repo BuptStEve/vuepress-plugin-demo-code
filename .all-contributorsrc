@@ -40,7 +40,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "mrspence",
+      "name": "Spence",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30320791?v=4",
+      "profile": "https://barr.media",
+      "contributions": [
+        "code"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
