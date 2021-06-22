@@ -1,6 +1,7 @@
 module.exports = {
     verbose: false,
     testURL: 'http://localhost/',
+    testEnvironment: 'jsdom',
     collectCoverage: true,
     collectCoverageFrom: [
         'src/**',
