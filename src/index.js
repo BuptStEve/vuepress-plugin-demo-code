@@ -11,7 +11,7 @@ const defaults = {
 
     // https://docs.jsfiddle.net/api/display-a-fiddle-from-post
     jsfiddle: {
-        framework: "library/pure",
+        framework: 'library/pure',
     },
 
     // https://codesandbox.io/docs/importing#define-api
@@ -84,15 +84,15 @@ module.exports = (options = {}) => {
             minHeight,
         } = options
 
+        const jsfiddle = Object.assign({}, defaults.jsfiddle, options.jsfiddle)
         const onlineBtns = Object.assign({}, defaults.onlineBtns, options.onlineBtns)
         const codesandbox = Object.assign({}, defaults.codesandbox, options.codesandbox)
-        const jsfiddle = Object.assign({}, defaults.jsfiddle, options.jsfiddle)
 
         const jsLibsStr = encodeAndStringify(jsLibs)
         const cssLibsStr = encodeAndStringify(cssLibs)
+        const jsfiddleStr = encodeAndStringify(jsfiddle)
         const onlineBtnsStr = encodeAndStringify(onlineBtns)
         const codesandboxStr = encodeAndStringify(codesandbox)
-        const jsfiddleStr = encodeAndStringify(jsfiddle)
 
         return `
             <DemoAndCode
@@ -103,9 +103,9 @@ module.exports = (options = {}) => {
                 jsLibsStr="${jsLibsStr}"
                 cssLibsStr="${cssLibsStr}"
                 :minHeight="${minHeight}"
+                jsfiddleStr="${jsfiddleStr}"
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
-                jsfiddleStr="${jsfiddleStr}"
             >
                 <template slot="demo">
         `

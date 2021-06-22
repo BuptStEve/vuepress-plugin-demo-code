@@ -92,6 +92,10 @@ module.exports = {
                 jsfiddle: true,
                 codesandbox: true,
             },
+            jsfiddle: {
+                framework: 'library/pure', // default
+                // framework: 'vue/2.6.11',
+            },
             codesandbox: {
                 deps: { 'lodash': 'latest' },
                 json: '',
@@ -140,6 +144,12 @@ The height of the code when it is folded.
 * Default: `{ codepen: true, jsfiddle: true, codesandbox: true }`
 
 Display online edit buttons.
+
+### jsfiddle
+* Type: `Object`
+* Default: `{ framework: 'library/pure' }`
+
+It passes [jsfiddle options](https://docs.jsfiddle.net/api/display-a-fiddle-from-post).
 
 ### codesandbox
 * Type: `Object`

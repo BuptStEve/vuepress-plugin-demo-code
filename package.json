@@ -10,7 +10,7 @@
         "cov": "open coverage/lcov-report/index.html",
         "docs": "vuepress dev docs",
         "docs:build": "vuepress build docs",
-        "lint": "eslint --fix . docs/.vuepress/ --ignore-path .gitignore",
+        "lint": "eslint --fix . docs/.vuepress/ --ext .js,.vue --ignore-path .gitignore",
         "test": "cross-env NODE_ENV=test jest",
         "test:tdd": "cross-env NODE_ENV=test jest --watch",
         "next:pm": "npm --no-git-tag-version version preminor",

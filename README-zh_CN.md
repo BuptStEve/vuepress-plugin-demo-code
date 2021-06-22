@@ -92,6 +92,10 @@ module.exports = {
                 jsfiddle: true,
                 codesandbox: true,
             },
+            jsfiddle: {
+                framework: 'library/pure', // default
+                // framework: 'vue/2.6.11',
+            },
             codesandbox: {
                 deps: { 'lodash': 'latest' },
                 json: '',
@@ -141,11 +145,17 @@ module.exports = {
 
 展示哪些在线编辑的按钮。
 
+### jsfiddle
+* Type: `Object`
+* Default: `{ framework: 'library/pure' }`
+
+透传 [jsfiddle options](https://docs.jsfiddle.net/api/display-a-fiddle-from-post).
+
 ### codesandbox
 * 类型：`Object`
 * 默认值：`{ deps: {}, json: '', query: 'module=App.vue'', embed: '' }`
 
-It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
+透传 [CodeSandbox options](https://codesandbox.io/docs/importing#define-api).
 
 > `deps` is dependencies
 
