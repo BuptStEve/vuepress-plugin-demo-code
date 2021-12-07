@@ -111,7 +111,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .demo-and-code-online-edit-wrapper {
     display: inline-block;
 

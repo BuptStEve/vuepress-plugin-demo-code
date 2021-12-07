@@ -150,7 +150,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
 html {
     scroll-behavior: smooth;

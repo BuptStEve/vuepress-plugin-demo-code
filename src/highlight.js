@@ -5,7 +5,6 @@ if (typeof window !== 'undefined') {
 
 const prism = require('prismjs')
 const escapeHtml = require('escape-html')
-const loadLanguages = require('prismjs/components/index')
 
 function wrap (code, lang) {
     if (lang === 'text') {
@@ -42,11 +41,7 @@ module.exports = (str, lang) => {
     lang = getLangCodeFromExtension(lang)
 
     if (!prism.languages[lang]) {
-        try {
-            loadLanguages([lang])
-        } catch (e) {
-            console.warn(`[vuepress] Syntax highlight for language "${lang}" is not supported.`)
-        }
+        console.warn(`[vuepress] Syntax highlight for language "${lang}" is not supported.`)
     }
     if (prism.languages[lang]) {
         const code = prism.highlight(str, prism.languages[lang], lang)

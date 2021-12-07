@@ -26,22 +26,15 @@ const defaults = {
 module.exports = (options = {}) => {
     const {
         demoCodeMark = 'demo',
-        copyOptions = {
-            align: 'top',
-            selector: '.demo-and-code-wrapper div[class*="language-"] pre',
-        },
     } = options
     const END_TYPE = `container_${demoCodeMark}_close`
 
     return {
         name: 'vuepress-plugin-demo-code',
-        plugins: [
-            ['code-copy', copyOptions],
-        ],
-        enhanceAppFiles: [
+        clientAppEnhanceFiles: [
             path.resolve(__dirname, 'enhanceAppFile.js'),
         ],
-        extendMarkdown: (md) => {
+        extendsMarkdown: (md) => {
             md.use(markdownItContainer, demoCodeMark, { render })
         },
     }

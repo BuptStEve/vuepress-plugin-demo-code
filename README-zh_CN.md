@@ -15,7 +15,8 @@
     </a>
 </p>
 
-[English](../) | 简体中文
+<a href="https://buptsteve.github.io/vuepress-plugin-demo-code/">English</a> | 简体中文
+
 
 > demo-code plugin for vuepress.
 
@@ -35,7 +36,7 @@ export default {
 :::
 ```
 
-[实际效果请点击这里](./example/#实现效果)
+<a href="https://buptsteve.github.io/vuepress-plugin-demo-code/zh/example/">实际效果请点击这里</a>
 
 ## Features
 * 只有一份代码同时生成 demo 和 code
@@ -103,7 +104,6 @@ module.exports = {
                 embed: '',
             },
             demoCodeMark: 'demo-code',
-            copyOptions: { ... },
         }]
     ],
 }
@@ -164,12 +164,6 @@ module.exports = {
 * 默认值：`demo`
 
 插件的标记，即跟在 `:::` 后的标记。
-
-### copyOptions
-* 类型：`Object/Boolean`
-* 默认值：`{ align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }`
-
-透传 [vuepress-plugin-code-copy](https://github.com/znicholasbrown/vuepress-plugin-code-copy#options) 的参数，或传 `false` 禁用它。
 
 ## Related
 * [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)

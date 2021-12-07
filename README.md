@@ -103,7 +103,6 @@ module.exports = {
                 embed: '',
             },
             demoCodeMark: 'demo-code',
-            copyOptions: { ... },
         }]
     ],
 }
@@ -164,12 +163,6 @@ It passes [CodeSandbox options](https://codesandbox.io/docs/importing#define-api
 * Default: `demo`
 
 The mark of the plugin, follows the tag after `:::`.
-
-### copyOptions
-* Type: `Object/Boolean`
-* Default: `{ align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }`
-
-It passes [vuepress-plugin-code-copy](https://github.com/znicholasbrown/vuepress-plugin-code-copy#options)'s options, or `false` to disable it.
 
 ## Related
 * [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)
