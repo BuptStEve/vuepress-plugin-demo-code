@@ -110,7 +110,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .demo-and-code-online-edit-wrapper {
   display: inline-block;
 

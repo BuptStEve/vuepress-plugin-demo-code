@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "jsx": "preserve",
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"]
-        }
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     }
+  }
 }

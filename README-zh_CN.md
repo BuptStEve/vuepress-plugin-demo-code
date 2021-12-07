@@ -110,7 +110,6 @@ module.exports = {
         embed: '',
       },
       demoCodeMark: 'demo-code',
-      copyOptions: { ... },
     }]
   ],
 }
@@ -177,12 +176,6 @@ vue 的语义化版本字符串。想要了解更多的语义化版本格式，�
 * 默认值：`demo`
 
 插件的标记，即跟在 `:::` 后的标记。
-
-### copyOptions
-* 类型：`Object/Boolean`
-* 默认值：`{ align: 'top', selector: '.demo-and-code-wrapper div[class*="language-"] pre' }`
-
-透传 [vuepress-plugin-code-copy](https://github.com/znicholasbrown/vuepress-plugin-code-copy#options) 的参数，或传 `false` 禁用它。
 
 ## Related
 * [vuepress-plugin-demo-block](https://github.com/xiguaxigua/vuepress-plugin-demo-block)

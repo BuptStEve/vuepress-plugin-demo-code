@@ -26,17 +26,15 @@
     </div>
 
     <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
-      <div
-        v-html="highlightCode"
-        :class="`language-${language} extra-class`"
-      />
+      <div :class="`language-${language} ext-${language}`">
+        <pre :class="`language-${language}`"><code v-html="highlightCode" /></pre>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import OnlineEdit from './OnlineEdit.vue'
-import getHighlightCodeHtml from './highlight'
 import {
   JS_RE,
   CSS_RE,
@@ -64,6 +62,7 @@ export default {
     jsfiddleStr: { type: String, default: '{}' },
     onlineBtnsStr: { type: String, default: '{}' },
     codesandboxStr: { type: String, default: '{}' },
+    highlightCodeStr: { type: String, default: '' },
     minHeight: {
       type: Number,
       default: 200,
@@ -84,7 +83,7 @@ export default {
   computed: {
     // button text
     controlText: (vm) => vm.isShowCode ? vm.hideText : vm.showText,
-    highlightCode: vm => getHighlightCodeHtml(vm.decodedHtmlStr, vm.language),
+    highlightCode: vm => decodeURIComponent(vm.highlightCodeStr),
     decodedHtmlStr: vm => decodeURIComponent(vm.htmlStr),
     showOnlineBtns: vm => parseAndDecode(vm.onlineBtnsStr),
     // icon animation
@@ -152,13 +151,18 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="css">
 html {
   scroll-behavior: smooth;
 }
+
+template {
+  display: block;
+}
 </style>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
+
 .demo-and-code-wrapper {
   padding: 20px 0;
 

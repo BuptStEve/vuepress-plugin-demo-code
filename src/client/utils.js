@@ -1,8 +1,19 @@
-const { getParameters } = require('codesandbox-import-utils/lib/api/define')
-const {
+import { compressToBase64 } from '@amoutonbrady/lz-string'
+import {
   CODE_SANDBOX_JS,
   CODE_SANDBOX_HTML,
-} = require('./constants')
+} from './constants'
+
+function compress (input) {
+  return compressToBase64(input)
+    .replace(/\+/g, '-') // Convert '+' to '-'
+    .replace(/\//g, '_') // Convert '/' to '_'
+    .replace(/=+$/, '') // Remove ending '='
+}
+// copy from codesandbox-import-utils/lib/api/define.js
+const getParameters = (parameters) => {
+  return compress(JSON.stringify(parameters))
+}
 
 const getJsTmpl = (js) => {
   const vueAttrs = js
@@ -43,17 +54,19 @@ const getCodeSandboxTmpl = ({
     'index.js': { isBinary: false, content: CODE_SANDBOX_JS },
     'App.vue': {
       isBinary: false,
-      content:
+      content: (
         `<template>\n\n${html}\n\n</template>\n\n` +
         `<script>\n${js}\n</script>\n\n` +
-        `<style>\n${css}\n</style>\n`,
+        `<style>\n${css}\n</style>\n`
+      ),
     },
     'index.html': {
       isBinary: false,
-      content:
+      content: (
         cssLibs.map(urlToHtmlTag('css')) +
         jsLibs.map(urlToHtmlTag('js')) +
-        CODE_SANDBOX_HTML,
+        CODE_SANDBOX_HTML
+      ),
     },
     'package.json': {
       isBinary: false,
@@ -70,7 +83,7 @@ const getCodeSandboxTmpl = ({
 const parseAndDecode = str => JSON.parse(decodeURIComponent(str))
 const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
 
-module.exports = {
+export {
   getJsTmpl,
   getHtmlTmpl,
   parseAndDecode,

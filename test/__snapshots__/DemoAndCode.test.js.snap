@@ -4,7 +4,8 @@ exports[`DemoAndCode should be rendered 1`] = `
 <section
   class="demo-and-code-wrapper"
 >
-   
+  
+  
   <div
     class="code-control"
     style="top: 0px; cursor: auto;"
@@ -13,19 +14,17 @@ exports[`DemoAndCode should be rendered 1`] = `
       class="control-btn"
       style="display: none;"
     >
-      
-      show code
-      
+      show code 
       <i
         class="arrow-icon"
         style="transform: rotate(-180deg);"
       />
     </span>
-     
     <div
       class="online-wrapper"
     >
-      <onlineedit-stub
+      
+      <online-edit-stub
         codesandboxoptions="[object Object]"
         css=""
         csslibs=""
@@ -40,7 +39,7 @@ exports[`DemoAndCode should be rendered 1`] = `
         style="display: none;"
         vueversion="^2.6.14"
       />
-      <onlineedit-stub
+      <online-edit-stub
         codesandboxoptions="[object Object]"
         css=""
         csslibs=""
@@ -55,7 +54,7 @@ exports[`DemoAndCode should be rendered 1`] = `
         style="display: none;"
         vueversion="^2.6.14"
       />
-      <onlineedit-stub
+      <online-edit-stub
         codesandboxoptions="[object Object]"
         css=""
         csslibs=""
@@ -70,19 +69,18 @@ exports[`DemoAndCode should be rendered 1`] = `
         style="display: none;"
         vueversion="^2.6.14"
       />
+      
     </div>
   </div>
-   
   <div
     class="code-wrapper"
     style="max-height: 200px;"
   >
     <div
-      class="language-vue extra-class"
+      class="language-vue ext-vue"
     >
       <pre
         class="language-vue"
-        v-pre=""
       >
         <code />
       </pre>
