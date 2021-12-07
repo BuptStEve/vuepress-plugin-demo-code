@@ -11,7 +11,7 @@ module.exports = {
     ],
     coveragePathIgnorePatterns: ['/__snapshots__/'],
     transform: {
-        '^.+\\.vue$': 'vue-jest',
+        '^.+\\.vue$': '@vue/vue3-jest',
         '^.+\\.jsx?$': 'babel-jest',
         '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     },
