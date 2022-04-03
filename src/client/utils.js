@@ -49,10 +49,12 @@ const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getPara
         },
         'package.json': {
             isBinary: false,
-            // @ts-ignore: TODO
-            content: {
-                dependencies: Object.assign({ vue: 'latest' }, deps),
-            },
+            content: JSON.stringify({
+                dependencies: Object.assign({ vue: '^2.6.14' }, deps),
+                devDependencies: {
+                    '@vue/cli-service': '^4.1.1',
+                },
+            }),
         },
     },
 })
