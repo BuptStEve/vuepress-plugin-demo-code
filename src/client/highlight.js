@@ -1,10 +1,5 @@
-if (typeof window !== 'undefined') {
-    // prevent highlighting automatically
-    window.Prism = { manual: true }
-}
-
-const prism = require('prismjs')
-const escapeHtml = require('escape-html')
+import prism from 'prismjs'
+import escapeHtml from 'escape-html'
 
 function wrap (code, lang) {
     if (lang === 'text') {
@@ -31,7 +26,7 @@ function getLangCodeFromExtension (extension) {
     return extensionMap[extension] || extension
 }
 
-module.exports = (str, lang) => {
+export default (str, lang) => {
     if (!lang) {
         return wrap(str, 'text')
     }

@@ -1,6 +1,7 @@
 const { path } = require('@vuepress/utils')
 const markdownItContainer = require('markdown-it-container')
-const { encodeAndStringify } = require('./utils')
+
+const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
 
 const defaults = {
     onlineBtns: {
@@ -32,7 +33,7 @@ module.exports = (options = {}) => {
     return {
         name: 'vuepress-plugin-demo-code',
         clientAppEnhanceFiles: [
-            path.resolve(__dirname, 'enhanceAppFile.js'),
+            path.resolve(__dirname, '../client/enhanceAppFile.js'),
         ],
         extendsMarkdown: (md) => {
             md.use(markdownItContainer, demoCodeMark, { render })

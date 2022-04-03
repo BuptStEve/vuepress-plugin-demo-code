@@ -3,7 +3,7 @@ import {
     parseAndDecode,
     getMatchedResult,
     encodeAndStringify,
-} from '@/utils'
+} from '@/client/utils'
 
 describe('utils', () => {
     it('getJsTmpl', () => {

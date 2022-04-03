@@ -1,15 +1,15 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
-const demoCode = require('../../src/')
-const { name, description } = require('../../package.json')
+import demoCode from '../../src/node'
+import { name, description } from '../../package.json'
 
 const ecosystemItems = [
     { text: '📖markdown-it-vuese', link: 'https://buptsteve.github.io/markdown-it-vuese/' },
 ]
 
 export default defineUserConfig<DefaultThemeOptions>({
-    base: '/' + name + '/',
+    base: `/${name}/`,
     locales: {
         '/': { lang: 'en-US', title: 'demo-code', description },
         '/zh/': {

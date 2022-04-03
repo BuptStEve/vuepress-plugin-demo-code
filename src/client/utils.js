@@ -1,8 +1,8 @@
-const { getParameters } = require('codesandbox-import-utils/lib/api/define')
-const {
+import { getParameters } from 'codesandbox-import-utils/lib/api/define'
+import {
     CODE_SANDBOX_JS,
     CODE_SANDBOX_HTML,
-} = require('./constants')
+} from './constants'
 
 const getJsTmpl = (js) => {
     const vueAttrs = js
@@ -32,20 +32,24 @@ const urlToHtmlTag = type => url => type === 'js'
 /* istanbul ignore next */
 const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getParameters({
     files: {
-        'index.js': { content: CODE_SANDBOX_JS },
+        'index.js': { isBinary: false, content: CODE_SANDBOX_JS },
         'App.vue': {
+            isBinary: false,
             content:
                 `<template>\n\n${html}\n\n</template>\n\n` +
                 `<script>\n${js}\n</script>\n\n` +
                 `<style>\n${css}\n</style>\n`,
         },
         'index.html': {
+            isBinary: false,
             content:
                 cssLibs.map(urlToHtmlTag('css')) +
                 jsLibs.map(urlToHtmlTag('js')) +
                 CODE_SANDBOX_HTML,
         },
         'package.json': {
+            isBinary: false,
+            // @ts-ignore: TODO
             content: {
                 dependencies: Object.assign({ vue: 'latest' }, deps),
             },
@@ -56,7 +60,7 @@ const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getPara
 const parseAndDecode = str => JSON.parse(decodeURIComponent(str))
 const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
 
-module.exports = {
+export {
     getJsTmpl,
     getHtmlTmpl,
     parseAndDecode,

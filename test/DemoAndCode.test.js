@@ -1,7 +1,7 @@
 
 import { shallowMount } from '@vue/test-utils'
 
-import DemoAndCode from '@/DemoAndCode.vue'
+import DemoAndCode from '@/client/DemoAndCode.vue'
 
 describe('DemoAndCode', () => {
     let wrapper

@@ -5,9 +5,9 @@ module.exports = {
     collectCoverage: true,
     collectCoverageFrom: [
         'src/**',
-        '!src/icons/**',
-        '!src/highlight.js',
-        '!src/enhanceAppFile.js',
+        '!src/client/icons/**',
+        '!src/client/highlight.js',
+        '!src/client/enhanceAppFile.js',
     ],
     coveragePathIgnorePatterns: ['/__snapshots__/'],
     transform: {
