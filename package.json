@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-demo-code",
-    "version": "1.0.0-0",
+    "version": "1.0.0-1",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [
@@ -44,7 +44,7 @@
         "@vue/compiler-sfc": "^3.2.24",
         "@vue/test-utils": "^2.0.0-rc.17",
         "@vue/vue3-jest": "^27.0.0-alpha.4",
-        "@vuepress/plugin-search": "^2.0.0-beta.27",
+        "@vuepress/plugin-search": "2.0.0-beta.27",
         "all-contributors-cli": "^6.20.0",
         "babel-core": "^7.0.0-bridge.0",
         "babel-jest": "^27.4.2",
@@ -68,7 +68,7 @@
         "markdown-it-include": "^2.0.0",
         "rimraf": "^3.0.2",
         "standard-version": "^9.3.2",
-        "vuepress": "^2.0.0-beta.27",
+        "vuepress": "2.0.0-beta.27",
         "vuepress-plugin-smooth-scroll": "^0.0.10"
     },
     "keywords": [

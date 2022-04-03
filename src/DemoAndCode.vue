@@ -156,6 +156,10 @@ html {
     scroll-behavior: smooth;
 }
 
+template {
+    display: block;
+}
+
 .demo-and-code-wrapper {
     padding: 20px 0;
 

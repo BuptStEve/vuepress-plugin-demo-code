@@ -1,4 +1,4 @@
-const path = require('path')
+const { path } = require('@vuepress/utils')
 const markdownItContainer = require('markdown-it-container')
 const { encodeAndStringify } = require('./utils')
 
@@ -100,7 +100,7 @@ module.exports = (options = {}) => {
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
             >
-                <template slot="demo">
+                <template #demo>
         `
     }
 }
