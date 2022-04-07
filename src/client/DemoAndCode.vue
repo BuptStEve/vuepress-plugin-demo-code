@@ -20,6 +20,7 @@
                     v-show="showOnlineBtns[platform]"
                     v-bind="parsedCode"
                     :platform="platform"
+                    :vueVersion="vueVersion"
                 />
             </div>
         </div>
@@ -57,15 +58,16 @@ export default {
         hideText: { type: String, default: 'hide code' },
         jsLibsStr: { type: String, default: '[]' },
         cssLibsStr: { type: String, default: '[]' },
+        vueVersion: { type: String, default: '^2.6.14' },
+        jsfiddleStr: { type: String, default: '{}' },
+        onlineBtnsStr: { type: String, default: '{}' },
+        codesandboxStr: { type: String, default: '{}' },
+        highlightCodeStr: { type: String, default: '' },
         minHeight: {
             type: Number,
             default: 200,
             validator: val => val >= 0,
         },
-        jsfiddleStr: { type: String, default: '{}' },
-        onlineBtnsStr: { type: String, default: '{}' },
-        codesandboxStr: { type: String, default: '{}' },
-        highlightCodeStr: { type: String, default: '' },
     },
     data () {
         return {
@@ -108,8 +110,8 @@ export default {
 
             const jsLibs = parseAndDecode(vm.jsLibsStr)
             const cssLibs = parseAndDecode(vm.cssLibsStr)
-            const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
             const jsfiddleOptions = parseAndDecode(vm.jsfiddleStr)
+            const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
 
             return { js, css, html, jsLibs, cssLibs, codesandboxOptions, jsfiddleOptions }
         },

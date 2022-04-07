@@ -84,6 +84,7 @@ module.exports = {
             cssLibs: [
                 'https://unpkg.com/animate.css@3.7.0/animate.min.css',
             ],
+            vueVersion: '^3',
             showText: 'show code',
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
@@ -120,6 +121,12 @@ module.exports = {
 * 默认值：`[]`
 
 展示 demo 所需的 css 库。
+
+### vueVersion
+* 类型：`String` (语义化版本格式)
+* 默认值：`^2.6.14`
+
+vue 的语义化版本字符串。想要了解更多的语义化版本格式，可以看这里 [npm semver calculator](https://semver.npmjs.com/).
 
 ### showText
 * 类型：`String`

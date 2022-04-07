@@ -41,7 +41,15 @@ const urlToHtmlTag = type => url => type === 'js'
         : 'Error type: js | css'
 
 /* istanbul ignore next */
-const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getParameters({
+const getCodeSandboxTmpl = ({
+    js,
+    css,
+    html,
+    deps,
+    jsLibs,
+    cssLibs,
+    vueVersion,
+}) => getParameters({
     files: {
         'index.js': { isBinary: false, content: CODE_SANDBOX_JS },
         'App.vue': {
@@ -61,7 +69,7 @@ const getCodeSandboxTmpl = ({ js, css, html, deps, jsLibs, cssLibs }) => getPara
         'package.json': {
             isBinary: false,
             content: JSON.stringify({
-                dependencies: Object.assign({ vue: '^2.6.14' }, deps),
+                dependencies: Object.assign({ vue: vueVersion }, deps),
                 devDependencies: {
                     '@vue/cli-service': '^4.1.1',
                 },

@@ -48,7 +48,7 @@ import {
     PLATFORM_TIP_MAP,
 } from './constants'
 
-const vueJs = 'https://unpkg.com/vue@2.6.14/dist/vue.js'
+const getUnpkgVueJs = vueVersion => `https://unpkg.com/vue@${encodeURIComponent(vueVersion)}`
 
 export default {
     name: 'OnlineEdit',
@@ -58,11 +58,6 @@ export default {
         codesandbox,
     },
     props: {
-        platform: {
-            type: String,
-            required: true,
-            validator: val => PLATFORMS.indexOf(val) !== -1,
-        },
         js: { type: String, default: '' },
         css: { type: String, default: '' },
         html: { type: String, default: '' },
@@ -71,24 +66,27 @@ export default {
         jsLibs: { type: Array, default: () => [] },
         cssLibs: { type: Array, default: () => [] },
         editors: { type: String, default: '101' },
+        vueVersion: { type: String, default: '^2.6.14' },
         jsfiddleOptions: { type: Object, default: () => ({}) },
         codesandboxOptions: { type: Object, default: () => ({}) },
+        platform: {
+            type: String,
+            required: true,
+            validator: val => PLATFORMS.indexOf(val) !== -1,
+        },
     },
     computed: {
         jsTmpl: vm => getJsTmpl(vm.js),
         htmlTmpl: vm => getHtmlTmpl(vm.html),
         actionUrl: vm => {
-            if (vm.platform === 'jsfiddle') {
-                return ACTION_MAP[vm.platform] + vm.jsfiddleOptions.framework
-            }
-
-            return ACTION_MAP[vm.platform]
+            if (vm.platform !== 'jsfiddle') return ACTION_MAP[vm.platform]
+            return ACTION_MAP[vm.platform] + vm.jsfiddleOptions.framework
         },
         resources: vm => vm.jsLibsWithVue.concat(vm.cssLibs).join(','),
         js_external: vm => vm.jsLibsWithVue.join(';'),
         platformTip: vm => PLATFORM_TIP_MAP[vm.platform],
         css_external: vm => vm.cssLibs.join(';'),
-        jsLibsWithVue: vm => vm.jsLibs.concat(vueJs),
+        jsLibsWithVue: vm => vm.jsLibs.concat(getUnpkgVueJs(vm.vueVersion)),
         codepenValue: (vm) => JSON.stringify({
             js: vm.jsTmpl,
             css: vm.css,
@@ -106,6 +104,7 @@ export default {
             deps: vm.codesandboxOptions.deps,
             jsLibs: vm.jsLibs,
             cssLibs: vm.cssLibs,
+            vueVersion: vm.vueVersion,
         }),
     },
 }

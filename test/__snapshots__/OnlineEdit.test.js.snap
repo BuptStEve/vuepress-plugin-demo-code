@@ -11,7 +11,7 @@ exports[`OnlineEdit should be rendered 1`] = `
   <input
     name="data"
     type="hidden"
-    value="{\\"js\\":\\"new Vue({\\\\n\\\\tel: '#app', \\\\n\\\\t\\\\n})\\",\\"css\\":\\"\\",\\"html\\":\\"<div id=\\\\\\"app\\\\\\">\\\\n\\\\n\\\\n\\\\n</div>\\",\\"layout\\":\\"left\\",\\"editors\\":\\"101\\",\\"js_external\\":\\"https://unpkg.com/vue@2.6.14/dist/vue.js\\",\\"css_external\\":\\"\\",\\"js_pre_processor\\":\\"babel\\"}"
+    value="{\\"js\\":\\"new Vue({\\\\n\\\\tel: '#app', \\\\n\\\\t\\\\n})\\",\\"css\\":\\"\\",\\"html\\":\\"<div id=\\\\\\"app\\\\\\">\\\\n\\\\n\\\\n\\\\n</div>\\",\\"layout\\":\\"left\\",\\"editors\\":\\"101\\",\\"js_external\\":\\"https://unpkg.com/vue@%5E2.6.14\\",\\"css_external\\":\\"\\",\\"js_pre_processor\\":\\"babel\\"}"
   />
   <!-- https://docs.jsfiddle.net/api/display-a-fiddle-from-post -->
   <!--v-if-->

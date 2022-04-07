@@ -28,6 +28,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             cssLibs: [
                 'https://unpkg.com/animate.css@3.7.0/animate.min.css',
             ],
+            vueVersion: '^3',
             showText: 'show more',
             hideText: 'hide',
         }],
