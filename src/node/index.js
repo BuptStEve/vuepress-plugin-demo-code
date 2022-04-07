@@ -40,7 +40,7 @@ module.exports = (options = {}) => {
         },
     }
 
-    function render (tokens, idx) {
+    function render (tokens, idx, { highlight }) {
         const { nesting, info } = tokens[idx]
 
         if (nesting === -1) {
@@ -87,6 +87,7 @@ module.exports = (options = {}) => {
         const jsfiddleStr = encodeAndStringify(jsfiddle)
         const onlineBtnsStr = encodeAndStringify(onlineBtns)
         const codesandboxStr = encodeAndStringify(codesandbox)
+        const highlightCodeStr = encodeURIComponent(highlight(htmlStr, language))
 
         return `
             <DemoAndCode
@@ -100,6 +101,7 @@ module.exports = (options = {}) => {
                 jsfiddleStr="${jsfiddleStr}"
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
+                highlightCodeStr="${highlightCodeStr}"
             >
                 <template #demo>
         `

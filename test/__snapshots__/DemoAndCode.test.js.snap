@@ -74,11 +74,10 @@ exports[`DemoAndCode should be rendered 1`] = `
     style="max-height: 200px;"
   >
     <div
-      class="language-vue extra-class"
+      class="language-vue ext-vue"
     >
       <pre
         class="language-vue"
-        v-pre=""
       >
         <code />
       </pre>

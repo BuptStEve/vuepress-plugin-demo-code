@@ -48,7 +48,7 @@ import {
     PLATFORM_TIP_MAP,
 } from './constants'
 
-const vueJs = 'https://unpkg.com/vue/dist/vue.js'
+const vueJs = 'https://unpkg.com/vue@2.6.14/dist/vue.js'
 
 export default {
     name: 'OnlineEdit',
