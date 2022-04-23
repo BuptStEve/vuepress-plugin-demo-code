@@ -1,36 +1,36 @@
 <template>
-    <form
-        class="demo-and-code-online-edit-wrapper"
-        target="_blank"
-        :action="actionUrl"
-        method="post"
-    >
-        <!-- https://blog.codepen.io/documentation/api/prefill/ -->
-        <template v-if="platform === 'codepen'">
-            <input type="hidden" name="data" :value="codepenValue" />
-        </template>
+  <form
+    class="demo-and-code-online-edit-wrapper"
+    target="_blank"
+    :action="actionUrl"
+    method="post"
+  >
+    <!-- https://blog.codepen.io/documentation/api/prefill/ -->
+    <template v-if="platform === 'codepen'">
+      <input type="hidden" name="data" :value="codepenValue" />
+    </template>
 
-        <!-- https://docs.jsfiddle.net/api/display-a-fiddle-from-post -->
-        <template v-if="platform === 'jsfiddle'">
-            <input type="hidden" name="js" :value="js" />
-            <input type="hidden" name="css" :value="css" />
-            <input type="hidden" name="html" :value="html" />
-            <input type="hidden" name="panel_js" value="3" />
-            <input type="hidden" name="resources" :value="resources" />
-        </template>
+    <!-- https://docs.jsfiddle.net/api/display-a-fiddle-from-post -->
+    <template v-if="platform === 'jsfiddle'">
+      <input type="hidden" name="js" :value="js" />
+      <input type="hidden" name="css" :value="css" />
+      <input type="hidden" name="html" :value="html" />
+      <input type="hidden" name="panel_js" value="3" />
+      <input type="hidden" name="resources" :value="resources" />
+    </template>
 
-        <!-- https://codesandbox.io/docs/importing#define-api -->
-        <template v-if="platform === 'codesandbox'">
-            <input type="hidden" name="parameters" :value="codeSandboxValue" />
-            <input v-if="codesandboxOptions.query" type="hidden" name="query" :value="codesandboxOptions.query" />
-            <input v-if="codesandboxOptions.embed" type="hidden" name="embed" :value="codesandboxOptions.embed" />
-            <input v-if="codesandboxOptions.json" type="hidden" name="json" :value="codesandboxOptions.json" />
-        </template>
+    <!-- https://codesandbox.io/docs/importing#define-api -->
+    <template v-if="platform === 'codesandbox'">
+      <input type="hidden" name="parameters" :value="codeSandboxValue" />
+      <input v-if="codesandboxOptions.query" type="hidden" name="query" :value="codesandboxOptions.query" />
+      <input v-if="codesandboxOptions.embed" type="hidden" name="embed" :value="codesandboxOptions.embed" />
+      <input v-if="codesandboxOptions.json" type="hidden" name="json" :value="codesandboxOptions.json" />
+    </template>
 
-        <button type="submit" :data-tip="platformTip">
-            <component :is="platform" />
-        </button>
-    </form>
+    <button type="submit" :data-tip="platformTip">
+      <component :is="platform" />
+    </button>
+  </form>
 </template>
 
 <script>
@@ -112,56 +112,56 @@ export default {
 
 <style lang="stylus">
 .demo-and-code-online-edit-wrapper {
-    display: inline-block;
+  display: inline-block;
 
-    vertical-align: middle;
+  vertical-align: middle;
 
-    button {
-        position: relative;
+  button {
+    position: relative;
 
-        cursor: pointer;
+    cursor: pointer;
 
-        border-color: transparent;
-        outline: none;
-        background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    background-color: transparent;
 
-        &:before,
-        &:after {
-            position: absolute;
-            left: 50%;
+    &:before,
+    &:after {
+      position: absolute;
+      left: 50%;
 
-            transform: translateX(-50%);
-        }
-
-        &:hover {
-            &:before {
-                top: -30px;
-
-                padding: 6px;
-
-                content: attr(data-tip);
-
-                color: #fff;
-                border-radius: 4px;
-                background-color: rgba(0, 0, 0, .8);
-
-                line-height: 1;
-            }
-
-            &:after {
-                top: -7px;
-
-                content: '';
-
-                border: 5px solid transparent;
-                border-top-color: rgba(0, 0, 0, .8);
-            }
-        }
+      transform: translateX(-50%);
     }
 
-    svg {
-        width: 34px;
-        height: 20px;
+    &:hover {
+      &:before {
+        top: -30px;
+
+        padding: 6px;
+
+        content: attr(data-tip);
+
+        color: #fff;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, .8);
+
+        line-height: 1;
+      }
+
+      &:after {
+        top: -7px;
+
+        content: '';
+
+        border: 5px solid transparent;
+        border-top-color: rgba(0, 0, 0, .8);
+      }
     }
+  }
+
+  svg {
+    width: 34px;
+    height: 20px;
+  }
 }
 </style>

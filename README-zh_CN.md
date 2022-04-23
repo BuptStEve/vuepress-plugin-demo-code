@@ -1,12 +1,12 @@
 <h1 align="center">vuepress-plugin-demo-code</h1>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code" target="_blank">
-        <img src="https://badgen.net/npm/dm/vuepress-plugin-demo-code" alt="Downloads per month">
-        <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version">
-        <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code/next.svg" alt="Next Version">
-        <img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License">
-    </a>
+  <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code" target="_blank">
+    <img src="https://badgen.net/npm/dm/vuepress-plugin-demo-code" alt="Downloads per month">
+    <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version">
+    <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code/next.svg" alt="Next Version">
+    <img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License">
+  </a>
 </p>
 
 <a href="https://buptsteve.github.io/vuepress-plugin-demo-code/">English</a> | 简体中文
@@ -21,9 +21,9 @@
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 :::
@@ -71,7 +71,7 @@ $ yarn add -D vuepress-plugin-demo-code@next
 
 ```js
 module.exports = {
-    plugins: ['demo-code'],
+  plugins: ['demo-code'],
 }
 ```
 
@@ -80,39 +80,39 @@ module.exports = {
 
 ```js
 module.exports = {
-    plugins: [
-        ['demo-code', {
-            jsLibs: [
-                // umd
-                'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
-            ],
-            cssLibs: [
-                'https://unpkg.com/animate.css@3.7.0/animate.min.css',
-            ],
-            vueVersion: '^3',
-            showText: 'show code',
-            hideText: 'hide',
-            styleStr: 'text-decoration: underline;',
-            minHeight: 200,
-            onlineBtns: {
-                codepen: true,
-                jsfiddle: true,
-                codesandbox: true,
-            },
-            jsfiddle: {
-                framework: 'library/pure', // default
-                // framework: 'vue/2.6.11',
-            },
-            codesandbox: {
-                deps: { 'lodash': 'latest' },
-                json: '',
-                query: '',
-                embed: '',
-            },
-            demoCodeMark: 'demo-code',
-            copyOptions: { ... },
-        }]
-    ],
+  plugins: [
+    ['demo-code', {
+      jsLibs: [
+        // umd
+        'https://unpkg.com/tua-storage/dist/TuaStorage.umd.js',
+      ],
+      cssLibs: [
+        'https://unpkg.com/animate.css@3.7.0/animate.min.css',
+      ],
+      vueVersion: '^3',
+      showText: 'show code',
+      hideText: 'hide',
+      styleStr: 'text-decoration: underline;',
+      minHeight: 200,
+      onlineBtns: {
+        codepen: true,
+        jsfiddle: true,
+        codesandbox: true,
+      },
+      jsfiddle: {
+        framework: 'library/pure', // default
+        // framework: 'vue/2.6.11',
+      },
+      codesandbox: {
+        deps: { 'lodash': 'latest' },
+        json: '',
+        query: '',
+        embed: '',
+      },
+      demoCodeMark: 'demo-code',
+      copyOptions: { ... },
+    }]
+  ],
 }
 ```
 
