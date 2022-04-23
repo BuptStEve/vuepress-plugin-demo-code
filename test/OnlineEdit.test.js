@@ -1,7 +1,7 @@
 
 import { shallowMount } from '@vue/test-utils'
 
-import OnlineEdit from '@/OnlineEdit.vue'
+import OnlineEdit from '@/client/OnlineEdit.vue'
 
 describe('OnlineEdit', () => {
   let wrapper

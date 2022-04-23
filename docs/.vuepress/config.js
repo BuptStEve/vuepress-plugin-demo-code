@@ -1,10 +1,10 @@
 const { defineConfig } = require('vuepress/config')
 
-const demoCode = require('../../src')
+const demoCode = require('../../src/node')
 const { name, description } = require('../../package.json')
 
 /**
- * @type {import('../../src/').DemoCodePluginOptions}
+ * @type {import('../../src/node').DemoCodePluginOptions}
  */
 const demoCodeOptions = {
   cssLibs: [
