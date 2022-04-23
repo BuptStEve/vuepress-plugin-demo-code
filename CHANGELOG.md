@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/BuptStEve/vuepress-plugin-demo-code/compare/v0.7.2...v1.0.0) (2022-04-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **client:** This plugin's components will use scoped style,
+see https://vue-loader.vuejs.org/guide/scoped-css.html#scoped-css
+
+### Bug Fixes
+
+* **client:** close [#37](https://github.com/BuptStEve/vuepress-plugin-demo-code/issues/37), use scoped style ([9bddb57](https://github.com/BuptStEve/vuepress-plugin-demo-code/commit/9bddb5770dd4876115b277bed7658499297efe5e))
+
 ### [0.7.2](https://github.com/BuptStEve/vuepress-plugin-demo-code/compare/v0.7.1...v0.7.2) (2022-04-23)
 
 ### [0.7.1](https://github.com/BuptStEve/vuepress-plugin-demo-code/compare/v0.7.0...v0.7.1) (2022-04-23)
