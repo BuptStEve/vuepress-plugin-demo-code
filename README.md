@@ -57,7 +57,19 @@ export default {
 ```bash
 $ npm i -D vuepress-plugin-demo-code
 # OR
+$ pnpm i -D vuepress-plugin-demo-code
+# OR
 $ yarn add -D vuepress-plugin-demo-code
+```
+
+* If you are using [vuepress 2.x](https://v2.vuepress.vuejs.org/), please install the next version.
+
+```bash
+$ npm i -D vuepress-plugin-demo-code@next
+# OR
+$ pnpm i -D vuepress-plugin-demo-code@next
+# OR
+$ yarn add -D vuepress-plugin-demo-code@next
 ```
 
 ## Usage
@@ -83,6 +95,7 @@ module.exports = {
             cssLibs: [
                 'https://unpkg.com/animate.css@3.7.0/animate.min.css',
             ],
+            vueVersion: '^3',
             showText: 'show code',
             hideText: 'hide',
             styleStr: 'text-decoration: underline;',
@@ -120,6 +133,12 @@ Js libraries for the demo.
 * Default: `[]`
 
 Css libraries for the demo.
+
+### vueVersion
+* Type: `String` (semantic versioning syntax)
+* Default: `^2.6.14`
+
+The semantic version string of vue. For more information on semantic versioning syntax, see the [npm semver calculator](https://semver.npmjs.com/).
 
 ### showText
 * Type: `String`

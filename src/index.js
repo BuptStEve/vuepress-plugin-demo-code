@@ -82,6 +82,7 @@ module.exports = (options = {}) => {
             showText = 'show code',
             hideText = 'hide code',
             minHeight,
+            vueVersion = '^2.6.14',
         } = options
 
         const jsfiddle = Object.assign({}, defaults.jsfiddle, options.jsfiddle)
@@ -101,8 +102,9 @@ module.exports = (options = {}) => {
                 showText="${showText}"
                 hideText="${hideText}"
                 jsLibsStr="${jsLibsStr}"
-                cssLibsStr="${cssLibsStr}"
                 :minHeight="${minHeight}"
+                cssLibsStr="${cssLibsStr}"
+                vueVersion="${vueVersion}"
                 jsfiddleStr="${jsfiddleStr}"
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
