@@ -21,9 +21,9 @@ import Vue from 'vue'
 import App from './App.vue'
 
 new Vue({
-    el: '#app',
-    template: '<App/>',
-    components: { App },
+  el: '#app',
+  template: '<App/>',
+  components: { App },
 })`
 
 const CODE_SANDBOX_HTML = '\n<div id="app"></div>'
