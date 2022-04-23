@@ -153,11 +153,12 @@ export default {
 </script>
 
 <style lang="stylus">
-
 html {
   scroll-behavior: smooth;
 }
+</style>
 
+<style lang="stylus" scoped>
 .demo-and-code-wrapper {
   padding: 20px 0;
 
