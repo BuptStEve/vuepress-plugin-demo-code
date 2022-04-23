@@ -1,87 +1,87 @@
 {
-    "name": "vuepress-plugin-demo-code",
-    "version": "0.7.2",
-    "description": "📝 Demo and code plugin for vuepress",
-    "main": "src/index.js",
-    "types": "src/index.d.ts",
-    "files": [
-        "src"
-    ],
-    "scripts": {
-        "prepare": "husky install",
-        "cov": "open coverage/lcov-report/index.html",
-        "docs": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "lint": "eslint --fix . docs/.vuepress/ --ext .js,.vue --ignore-path .gitignore",
-        "test": "cross-env NODE_ENV=test jest",
-        "test:tdd": "cross-env NODE_ENV=test jest --watch",
-        "release": "HUSKY=0 standard-version",
-        "pub:n": "HUSKY=0 bumpp --commit 'chore: v%s' --push && npm publish --tag next"
-    },
-    "lint-staged": {
-        "{src,test}/**/*.{js,vue}": [
-            "eslint --fix"
-        ]
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "dependencies": {
-        "codesandbox-import-utils": "^2.2.3",
-        "markdown-it-container": "^3.0.0",
-        "prismjs": "^1.28.0",
-        "vuepress-plugin-code-copy": "^1.0.6"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.17.9",
-        "@babel/preset-env": "^7.16.11",
-        "@commitlint/cli": "^12.1.4",
-        "@commitlint/config-conventional": "^12.1.4",
-        "@vue/test-utils": "^1.3.0",
-        "all-contributors-cli": "^6.20.0",
-        "babel-core": "^7.0.0-bridge.0",
-        "babel-eslint": "^10.1.0",
-        "bumpp": "^7.1.1",
-        "codecov": "^3.8.3",
-        "cross-env": "^7.0.3",
-        "cz-conventional-changelog": "^3.3.0",
-        "eslint": "^7.32.0",
-        "eslint-config-standard": "^16.0.3",
-        "eslint-config-vue": "^2.0.2",
-        "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-promise": "^5.2.0",
-        "eslint-plugin-standard": "^5.0.0",
-        "eslint-plugin-vue": "^7.20.0",
-        "gh-pages": "^3.2.3",
-        "husky": "^6.0.0",
-        "jest": "^27.5.1",
-        "jest-serializer-vue": "^2.0.2",
-        "jest-transform-stub": "^2.0.0",
-        "lint-staged": "^11.2.6",
-        "markdown-it-include": "^2.0.0",
-        "rimraf": "^3.0.2",
-        "standard-version": "^9.3.2",
-        "vue-jest": "^3.0.7",
-        "vuepress": "^1.9.7",
-        "vuepress-plugin-smooth-scroll": "^0.0.10"
-    },
-    "keywords": [
-        "vue",
-        "code",
-        "demo",
-        "vuepress",
-        "demo-code",
-        "documentation"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/BuptStEve/vuepress-plugin-demo-code.git"
-    },
-    "homepage": "https://buptsteve.github.io/vuepress-plugin-demo-code/",
-    "author": "StEve YoUng",
-    "license": "MIT",
-    "packageManager": "pnpm@^6"
+  "name": "vuepress-plugin-demo-code",
+  "version": "0.7.2",
+  "description": "📝 Demo and code plugin for vuepress",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "cov": "open coverage/lcov-report/index.html",
+    "docs": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "lint": "eslint --fix . docs/.vuepress/ --ext .js,.vue --ignore-path .gitignore",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:tdd": "cross-env NODE_ENV=test jest --watch",
+    "release": "HUSKY=0 standard-version",
+    "pub:n": "HUSKY=0 bumpp --commit 'chore: v%s' --push && npm publish --tag next"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.{js,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "codesandbox-import-utils": "^2.2.3",
+    "markdown-it-container": "^3.0.0",
+    "prismjs": "^1.28.0",
+    "vuepress-plugin-code-copy": "^1.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@vue/test-utils": "^1.3.0",
+    "all-contributors-cli": "^6.20.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "bumpp": "^7.1.1",
+    "codecov": "^3.8.3",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "gh-pages": "^3.2.3",
+    "husky": "^6.0.0",
+    "jest": "^27.5.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^11.2.6",
+    "markdown-it-include": "^2.0.0",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.2",
+    "vue-jest": "^3.0.7",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
+  },
+  "keywords": [
+    "vue",
+    "code",
+    "demo",
+    "vuepress",
+    "demo-code",
+    "documentation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuptStEve/vuepress-plugin-demo-code.git"
+  },
+  "homepage": "https://buptsteve.github.io/vuepress-plugin-demo-code/",
+  "author": "StEve YoUng",
+  "license": "MIT",
+  "packageManager": "pnpm@^6"
 }

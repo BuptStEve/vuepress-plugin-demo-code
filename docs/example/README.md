@@ -9,20 +9,20 @@ Just wrapper your demo code between `::: demo` and `:::`. Then you will get runn
 ```md
 ::: demo
 <template>
-    <button class="animated shake infinite" @click="onClick">Click me!</button>
+  <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 
 <style>
 button {
-    color: blue;
+  color: blue;
 }
 </style>
 :::
@@ -32,20 +32,20 @@ button {
 
 ::: demo
 <template>
-    <button class="animated shake infinite" @click="onClick">Click me!</button>
+  <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 
 <style>
 button {
-    color: blue;
+  color: blue;
 }
 </style>
 :::
@@ -58,12 +58,12 @@ You may notice that the top right corner of the display code shows `vue`(default
 ```md
 ::: demo html
 <p class="common-html">
-    this is <span style="color: red;">common</span> html
+  this is <span style="color: red;">common</span> html
 </p>
 
 <style>
 .common-html {
-    color: green;
+  color: green;
 }
 </style>
 :::
@@ -73,12 +73,12 @@ You may notice that the top right corner of the display code shows `vue`(default
 
 ::: demo html
 <p class="common-html">
-    this is <span style="color: red;">common</span> html
+  this is <span style="color: red;">common</span> html
 </p>
 
 <style>
 .common-html {
-    color: green;
+  color: green;
 }
 </style>
 :::

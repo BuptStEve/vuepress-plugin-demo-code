@@ -14,8 +14,8 @@ exports[`DemoAndCode should be rendered 1`] = `
       style="display: none;"
     >
       
-            show code
-            
+      show code
+      
       <i
         class="arrow-icon"
         style="transform: rotate(-180deg);"

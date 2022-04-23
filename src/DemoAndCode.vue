@@ -1,37 +1,37 @@
 <template>
-    <section class="demo-and-code-wrapper">
-        <slot name="demo" />
+  <section class="demo-and-code-wrapper">
+    <slot name="demo" />
 
-        <div
-            ref="codeControl"
-            class="code-control"
-            @click="onClickControl"
-            :style="codeControlStyle"
-        >
-            <span class="control-btn" v-show="isShowControl">
-                {{ controlText }}
-                <i class="arrow-icon" :style="iconStyle" />
-            </span>
+    <div
+      ref="codeControl"
+      class="code-control"
+      @click="onClickControl"
+      :style="codeControlStyle"
+    >
+      <span class="control-btn" v-show="isShowControl">
+        {{ controlText }}
+        <i class="arrow-icon" :style="iconStyle" />
+      </span>
 
-            <div class="online-wrapper" @click.stop>
-                <OnlineEdit
-                    v-for="platform in platforms"
-                    :key="platform"
-                    v-show="showOnlineBtns[platform]"
-                    v-bind="parsedCode"
-                    :platform="platform"
-                    :vueVersion="vueVersion"
-                />
-            </div>
-        </div>
+      <div class="online-wrapper" @click.stop>
+        <OnlineEdit
+          v-for="platform in platforms"
+          :key="platform"
+          v-show="showOnlineBtns[platform]"
+          v-bind="parsedCode"
+          :platform="platform"
+          :vueVersion="vueVersion"
+        />
+      </div>
+    </div>
 
-        <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
-            <div
-                v-html="highlightCode"
-                :class="`language-${language} extra-class`"
-            />
-        </div>
-    </section>
+    <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
+      <div
+        v-html="highlightCode"
+        :class="`language-${language} extra-class`"
+      />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -111,8 +111,8 @@ export default {
 
       const jsLibs = parseAndDecode(vm.jsLibsStr)
       const cssLibs = parseAndDecode(vm.cssLibsStr)
-      const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
       const jsfiddleOptions = parseAndDecode(vm.jsfiddleStr)
+      const codesandboxOptions = parseAndDecode(vm.codesandboxStr)
 
       return { js, css, html, jsLibs, cssLibs, codesandboxOptions, jsfiddleOptions }
     },
@@ -155,82 +155,82 @@ export default {
 <style lang="stylus">
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .demo-and-code-wrapper {
-    padding: 20px 0;
+  padding: 20px 0;
 
-    // for vuepress-plugin-code-copy
-    .code-copy {
-        position: absolute;
-        top: 20px;
-        right: 0;
+  // for vuepress-plugin-code-copy
+  .code-copy {
+    position: absolute;
+    top: 20px;
+    right: 0;
 
-        opacity: 1;
+    opacity: 1;
 
-        svg {
-            right: 10px;
-        }
+    svg {
+      right: 10px;
+    }
+  }
+
+  .code-control {
+    position: sticky;
+    z-index: 9;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 50px;
+    margin-bottom: -.85rem;
+
+    text-align: center;
+
+    background-color: #fff;
+
+    font-size: 20px;
+    line-height: 50px;
+
+    .control-btn {
+      display: flex;
+      flex: 1;
+      justify-content: center;
     }
 
-    .code-control {
-        position: sticky;
-        z-index: 9;
+    .arrow-icon {
+      display: inline-block;
+      align-self: center;
 
-        display: flex;
-        justify-content: space-between;
+      margin-left: 5px;
 
-        width: 100%;
-        height: 50px;
-        margin-bottom: -.85rem;
+      transition: transform .3s ease-in-out;
 
-        text-align: center;
-
-        background-color: #fff;
-
-        font-size: 20px;
-        line-height: 50px;
-
-        .control-btn {
-            display: flex;
-            flex: 1;
-            justify-content: center;
-        }
-
-        .arrow-icon {
-            display: inline-block;
-            align-self: center;
-
-            margin-left: 5px;
-
-            transition: transform .3s ease-in-out;
-
-            border-top: none;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid #2c3e50;
-            border-left: 6px solid transparent;
-        }
+      border-top: none;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #2c3e50;
+      border-left: 6px solid transparent;
     }
+  }
 
-    .code-wrapper {
-        overflow: hidden;
+  .code-wrapper {
+    overflow: hidden;
 
-        transition: max-height .6s ease-in-out;
-    }
+    transition: max-height .6s ease-in-out;
+  }
 }
 
 @media (max-width: 419px) {
-    .demo-and-code-wrapper {
-        margin: 0 -1.5rem;
+  .demo-and-code-wrapper {
+    margin: 0 -1.5rem;
 
-        .code-wrapper {
-            overflow: auto;
-        }
-
-        div[class*="language-"] {
-            margin: 0 !important;
-        }
+    .code-wrapper {
+      overflow: auto;
     }
+
+    div[class*="language-"] {
+      margin: 0 !important;
+    }
+  }
 }
 </style>
