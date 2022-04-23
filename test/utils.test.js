@@ -1,38 +1,38 @@
 import {
-    getJsTmpl,
-    parseAndDecode,
-    getMatchedResult,
-    encodeAndStringify,
+  getJsTmpl,
+  parseAndDecode,
+  getMatchedResult,
+  encodeAndStringify,
 } from '@/utils'
 
 describe('utils', () => {
-    it('getJsTmpl', () => {
-        const code = '  export default { data: () => ({}) }\n\n\n'
-        const result = getJsResult('data: () => ({})')
+  it('getJsTmpl', () => {
+    const code = '  export default { data: () => ({}) }\n\n\n'
+    const result = getJsResult('data: () => ({})')
 
-        expect(getJsTmpl('')).toBe(getJsResult(''))
-        expect(getJsTmpl(code)).toBe(result)
-    })
+    expect(getJsTmpl('')).toBe(getJsResult(''))
+    expect(getJsTmpl(code)).toBe(result)
+  })
 
-    it('getMatchedResult', () => {
-        const re = /export default {(.*)}/
-        const code = '  export default { data: () => ({}) }\n\n\n'
-        const result = getMatchedResult(re)(code)
+  it('getMatchedResult', () => {
+    const re = /export default {(.*)}/
+    const code = '  export default { data: () => ({}) }\n\n\n'
+    const result = getMatchedResult(re)(code)
 
-        expect(result).toBe('data: () => ({})')
-    })
+    expect(result).toBe('data: () => ({})')
+  })
 
-    it('parseAndDecode and encodeAndStringify', () => {
-        const obj = { a: 1 }
-        const arr = [1, 2, 3, obj]
+  it('parseAndDecode and encodeAndStringify', () => {
+    const obj = { a: 1 }
+    const arr = [1, 2, 3, obj]
 
-        expect(parseAndDecode(encodeAndStringify(obj))).toEqual(obj)
-        expect(parseAndDecode(encodeAndStringify(arr))).toEqual(arr)
-    })
+    expect(parseAndDecode(encodeAndStringify(obj))).toEqual(obj)
+    expect(parseAndDecode(encodeAndStringify(arr))).toEqual(arr)
+  })
 
-    // helpers
+  // helpers
 
-    function getJsResult (str) {
-        return `new Vue({\n\tel: '#app', \n\t${str}\n})`
-    }
+  function getJsResult (str) {
+    return `new Vue({\n\tel: '#app', \n\t${str}\n})`
+  }
 })

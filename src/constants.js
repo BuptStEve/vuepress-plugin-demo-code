@@ -5,15 +5,15 @@ const HTML_RE = /<template>([\s\S]+)<\/template>/
 const PLATFORMS = ['codepen', 'jsfiddle', 'codesandbox']
 
 const ACTION_MAP = {
-    codepen: 'https://codepen.io/pen/define',
-    jsfiddle: 'https://jsfiddle.net/api/post/',
-    codesandbox: 'https://codesandbox.io/api/v1/sandboxes/define',
+  codepen: 'https://codepen.io/pen/define',
+  jsfiddle: 'https://jsfiddle.net/api/post/',
+  codesandbox: 'https://codesandbox.io/api/v1/sandboxes/define',
 }
 
 const PLATFORM_TIP_MAP = {
-    codepen: 'Codepen',
-    jsfiddle: 'JSFiddle',
-    codesandbox: 'CodeSandbox',
+  codepen: 'Codepen',
+  jsfiddle: 'JSFiddle',
+  codesandbox: 'CodeSandbox',
 }
 
 const CODE_SANDBOX_JS = `
@@ -29,12 +29,12 @@ new Vue({
 const CODE_SANDBOX_HTML = '\n<div id="app"></div>'
 
 module.exports = {
-    JS_RE,
-    CSS_RE,
-    HTML_RE,
-    PLATFORMS,
-    ACTION_MAP,
-    CODE_SANDBOX_JS,
-    PLATFORM_TIP_MAP,
-    CODE_SANDBOX_HTML,
+  JS_RE,
+  CSS_RE,
+  HTML_RE,
+  PLATFORMS,
+  ACTION_MAP,
+  CODE_SANDBOX_JS,
+  PLATFORM_TIP_MAP,
+  CODE_SANDBOX_HTML,
 }
