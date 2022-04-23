@@ -1,6 +1,7 @@
 const path = require('path')
 const markdownItContainer = require('markdown-it-container')
-const { encodeAndStringify } = require('./utils')
+
+const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
 
 const defaults = {
   onlineBtns: {
@@ -39,7 +40,7 @@ module.exports = (options = {}) => {
       ['code-copy', copyOptions],
     ],
     enhanceAppFiles: [
-      path.resolve(__dirname, 'enhanceAppFile.js'),
+      path.resolve(__dirname, '../client/enhanceAppFile.js'),
     ],
     extendMarkdown: (md) => {
       md.use(markdownItContainer, demoCodeMark, { render })

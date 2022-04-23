@@ -2,8 +2,8 @@
   "name": "vuepress-plugin-demo-code",
   "version": "0.7.2",
   "description": "📝 Demo and code plugin for vuepress",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "src/node/index.js",
+  "types": "src/node/index.d.ts",
   "files": [
     "src"
   ],

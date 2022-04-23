@@ -1,4 +1,4 @@
-import demoCode from '@/'
+import demoCode from '@/node/'
 
 describe('vuepress-plugin-demo-code', () => {
   it('works well', () => {

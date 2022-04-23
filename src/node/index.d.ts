@@ -15,9 +15,9 @@ export interface DemoCodePluginOptions {
     minHeight?: number,
     /** Display online edit buttons. */
     onlineBtns?: {
-        codepen?: boolean,
-        jsfiddle?: boolean,
-        codesandbox?: boolean,
+      codepen?: boolean,
+      jsfiddle?: boolean,
+      codesandbox?: boolean,
     },
     /**
      * It passes [jsfiddle options](https://docs.jsfiddle.net/api/display-a-fiddle-from-post).
@@ -28,10 +28,10 @@ export interface DemoCodePluginOptions {
      * > `deps` is dependencies
      */
     codesandbox?: {
-        deps?: Record<string, string>
-        json?: string,
-        query?: string,
-        embed?: string,
+      deps?: Record<string, string>
+      json?: string,
+      query?: string,
+      embed?: string,
     },
     /** The mark of the plugin, follows the tag after `:::`. */
     demoCodeMark?: string,
@@ -39,7 +39,7 @@ export interface DemoCodePluginOptions {
      * It passes [vuepress-plugin-code-copy](https://github.com/znicholasbrown/vuepress-plugin-code-copy#options)'s options, or `false` to disable it.
      */
     copyOptions?: false | {
-        align?: string,
-        selector?: string,
+      align?: string,
+      selector?: string,
     },
 }
