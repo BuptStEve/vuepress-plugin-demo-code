@@ -15,7 +15,7 @@
         "lint": "eslint --fix . docs/.vuepress/ --ext .js,.vue --ignore-path .gitignore",
         "test": "cross-env NODE_ENV=test jest",
         "test:tdd": "cross-env NODE_ENV=test jest --watch",
-        "release": "standard-version",
+        "release": "standard-version -n",
         "next:pm": "npm --no-git-tag-version version preminor",
         "next:pr": "npm --no-git-tag-version version prerelease",
         "pub": "npm publish",
@@ -83,6 +83,7 @@
         "url": "git+https://github.com/BuptStEve/vuepress-plugin-demo-code.git"
     },
     "homepage": "https://buptsteve.github.io/vuepress-plugin-demo-code/",
-    "author": "StEve Young",
-    "license": "MIT"
+    "author": "StEve YoUng",
+    "license": "MIT",
+    "packageManager": "pnpm@^6"
 }
