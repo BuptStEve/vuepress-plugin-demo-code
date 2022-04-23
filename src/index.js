@@ -53,7 +53,7 @@ module.exports = (options = {}) => {
       return '</template></DemoAndCode>\n'
     }
 
-    let htmlStr = ''
+    let rawHtmlStr = ''
     let lastLine = 0
     const language = (info.split(demoCodeMark)[1] || 'vue').trim()
 
@@ -67,13 +67,13 @@ module.exports = (options = {}) => {
         const delta = map[0] - (lastLine || map[1])
 
         if (delta > 0) {
-          htmlStr += '\n'.repeat(delta)
+          rawHtmlStr += '\n'.repeat(delta)
         }
 
         lastLine = map[1]
       }
 
-      htmlStr += content
+      rawHtmlStr += content
     }
 
     const {
@@ -89,6 +89,7 @@ module.exports = (options = {}) => {
     const onlineBtns = Object.assign({}, defaults.onlineBtns, options.onlineBtns)
     const codesandbox = Object.assign({}, defaults.codesandbox, options.codesandbox)
 
+    const htmlStr = encodeURIComponent(rawHtmlStr)
     const jsLibsStr = encodeAndStringify(jsLibs)
     const cssLibsStr = encodeAndStringify(cssLibs)
     const jsfiddleStr = encodeAndStringify(jsfiddle)
@@ -97,7 +98,7 @@ module.exports = (options = {}) => {
 
     return `
             <DemoAndCode
-                htmlStr="${encodeURIComponent(htmlStr)}"
+                htmlStr="${htmlStr}"
                 language="${language}"
                 showText="${showText}"
                 hideText="${hideText}"
@@ -109,7 +110,7 @@ module.exports = (options = {}) => {
                 onlineBtnsStr="${onlineBtnsStr}"
                 codesandboxStr="${codesandboxStr}"
             >
-                <template slot="demo">
+                <template #demo>
         `
   }
 }

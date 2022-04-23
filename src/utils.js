@@ -44,16 +44,16 @@ const getCodeSandboxTmpl = ({
     'App.vue': {
       isBinary: false,
       content:
-                `<template>\n\n${html}\n\n</template>\n\n` +
-                `<script>\n${js}\n</script>\n\n` +
-                `<style>\n${css}\n</style>\n`,
+        `<template>\n\n${html}\n\n</template>\n\n` +
+        `<script>\n${js}\n</script>\n\n` +
+        `<style>\n${css}\n</style>\n`,
     },
     'index.html': {
       isBinary: false,
       content:
-                cssLibs.map(urlToHtmlTag('css')) +
-                jsLibs.map(urlToHtmlTag('js')) +
-                CODE_SANDBOX_HTML,
+        cssLibs.map(urlToHtmlTag('css')) +
+        jsLibs.map(urlToHtmlTag('js')) +
+        CODE_SANDBOX_HTML,
     },
     'package.json': {
       isBinary: false,
