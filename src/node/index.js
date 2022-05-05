@@ -1,4 +1,4 @@
-const path = require('path')
+const { path } = require('@vuepress/utils')
 const markdownItContainer = require('markdown-it-container')
 
 const encodeAndStringify = obj => encodeURIComponent(JSON.stringify(obj))
@@ -24,32 +24,30 @@ const defaults = {
   },
 }
 
-module.exports = (options = {}) => {
+const demoCodePlugin = (options = {}) => {
   const {
+    jsLibs = [],
+    cssLibs = [],
+    showText = 'show code',
+    hideText = 'hide code',
+    minHeight,
+    vueVersion = '^2.6.14',
     demoCodeMark = 'demo',
-    copyOptions = {
-      align: 'top',
-      selector: '.demo-and-code-wrapper div[class*="language-"] pre',
-    },
   } = options
   const END_TYPE = `container_${demoCodeMark}_close`
 
   return {
     name: 'vuepress-plugin-demo-code',
-    plugins: [
-      ['code-copy', copyOptions],
-    ],
-    enhanceAppFiles: [
+    clientAppEnhanceFiles: [
       path.resolve(__dirname, '../client/enhanceAppFile.js'),
     ],
-    extendMarkdown: (md) => {
+    extendsMarkdown: (md) => {
       md.use(markdownItContainer, demoCodeMark, { render })
     },
   }
 
-  function render (tokens, idx) {
+  function render (tokens, idx, { highlight }) {
     const { nesting, info } = tokens[idx]
-
     if (nesting === -1) {
       return '</template></DemoAndCode>\n'
     }
@@ -60,31 +58,17 @@ module.exports = (options = {}) => {
 
     for (let index = idx; index < tokens.length; index++) {
       const { map, type, content } = tokens[index]
-
       if (type === END_TYPE) break
-
       // add empty lines
       if (map) {
         const delta = map[0] - (lastLine || map[1])
-
         if (delta > 0) {
           rawHtmlStr += '\n'.repeat(delta)
         }
-
         lastLine = map[1]
       }
-
       rawHtmlStr += content
     }
-
-    const {
-      jsLibs = [],
-      cssLibs = [],
-      showText = 'show code',
-      hideText = 'hide code',
-      minHeight,
-      vueVersion = '^2.6.14',
-    } = options
 
     const jsfiddle = Object.assign({}, defaults.jsfiddle, options.jsfiddle)
     const onlineBtns = Object.assign({}, defaults.onlineBtns, options.onlineBtns)
@@ -96,22 +80,27 @@ module.exports = (options = {}) => {
     const jsfiddleStr = encodeAndStringify(jsfiddle)
     const onlineBtnsStr = encodeAndStringify(onlineBtns)
     const codesandboxStr = encodeAndStringify(codesandbox)
+    const highlightCodeStr = encodeURIComponent(highlight(rawHtmlStr, language))
 
     return `
-            <DemoAndCode
-                htmlStr="${htmlStr}"
-                language="${language}"
-                showText="${showText}"
-                hideText="${hideText}"
-                jsLibsStr="${jsLibsStr}"
-                :minHeight="${minHeight}"
-                cssLibsStr="${cssLibsStr}"
-                vueVersion="${vueVersion}"
-                jsfiddleStr="${jsfiddleStr}"
-                onlineBtnsStr="${onlineBtnsStr}"
-                codesandboxStr="${codesandboxStr}"
-            >
-                <template #demo>
-        `
+      <DemoAndCode
+        htmlStr="${htmlStr}"
+        language="${language}"
+        showText="${showText}"
+        hideText="${hideText}"
+        jsLibsStr="${jsLibsStr}"
+        :minHeight="${minHeight}"
+        cssLibsStr="${cssLibsStr}"
+        vueVersion="${vueVersion}"
+        jsfiddleStr="${jsfiddleStr}"
+        onlineBtnsStr="${onlineBtnsStr}"
+        codesandboxStr="${codesandboxStr}"
+        highlightCodeStr="${highlightCodeStr}"
+      >
+        <template #demo>
+    `
   }
 }
+
+module.exports = demoCodePlugin
+module.exports.demoCodePlugin = demoCodePlugin

@@ -8,20 +8,20 @@
 ```md
 ::: demo
 <template>
-    <button class="animated shake infinite" @click="onClick">Click me!</button>
+  <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 
 <style>
 button {
-    color: blue;
+  color: blue;
 }
 </style>
 :::
@@ -31,20 +31,20 @@ button {
 
 ::: demo
 <template>
-    <button class="animated shake infinite" @click="onClick">Click me!</button>
+  <button class="animated shake infinite" @click="onClick">Click me!</button>
 </template>
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 
 <style>
 button {
-    color: blue;
+  color: blue;
 }
 </style>
 :::
@@ -57,12 +57,12 @@ button {
 ```md
 ::: demo html
 <p class="common-html">
-    this is <span style="color: red;">common</span> html
+  this is <span style="color: red;">common</span> html
 </p>
 
 <style>
 .common-html {
-    color: green;
+  color: green;
 }
 </style>
 :::
@@ -72,12 +72,12 @@ button {
 
 ::: demo html
 <p class="common-html">
-    this is <span style="color: red;">common</span> html
+  this is <span style="color: red;">common</span> html
 </p>
 
 <style>
 .common-html {
-    color: green;
+  color: green;
 }
 </style>
 :::

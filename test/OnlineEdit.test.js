@@ -8,7 +8,7 @@ describe('OnlineEdit', () => {
 
   beforeEach(() => {
     wrapper = shallowMount(OnlineEdit, {
-      propsData: {
+      props: {
         platform: 'codepen',
       },
     })
