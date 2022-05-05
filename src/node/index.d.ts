@@ -46,6 +46,6 @@ export interface DemoCodePluginOptions {
   },
 }
 
-export function demoCodePlugin (options: DemoCodePluginOptions): Plugin
+export function demoCodePlugin (options?: DemoCodePluginOptions): Plugin
 
 export default demoCodePlugin
